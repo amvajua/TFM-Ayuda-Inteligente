@@ -1,3 +1,4 @@
+# Ignorar la carpeta target en backend
 backend/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
