@@ -1,7 +1,7 @@
 # TFM - Ayuda Inteligente para Sistemas de Atención al Ciudadano
 # 1. Descripción del proyecto
 Proyecto desarrollado como Trabajo Fin de Máster en Inteligencia Artificial. 
-El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas de IA, Web Semántica y consultas en lenguaje natural:
+El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas de IA, Web Semántica y consultas en lenguaje natural.
 
 ## 1.1 Objetivos principales
   - Implementar un sistema de **ayuda inteligente contextual** basado en una ontología del dominio.
