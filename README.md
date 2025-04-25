@@ -21,7 +21,10 @@ El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas
 ```
 TFM-Ayuda-Inteligente/
 ├── backend/     # Backend en Spring Boot + Ontop + conexión a Oracle
-├── frontend/    # Frontend en React + Tailwind
+├── frontend/    # Frontend en React
+├── odba/        # Fichero mapeo datos
+├── ontoAC/      # Ontología implementada en diferentes formatos
+├── TFM_Doc/     # Documento TFM (fase borrador)
 └── README.md    # Este archivo
 ```
 ## 1.4 Ejecución general
