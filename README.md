@@ -6,7 +6,7 @@ El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas
 ## 1.1 Objetivos principales
   - Implementar un sistema de **ayuda inteligente contextual** basado en una ontología del dominio.
   - Desarrollar un módulo para realizar **consultas personalizadas en lenguaje natural** con generación de listados desde Oracle.
-  - Integrar una solución semántica para la **detección automática de errores técnicos** en la aplicación web.
+  - Integrar una solución semántica para la **detección automática de errores** en la aplicación web.
 
 ## 1.2 Tecnologías utilizadas
 - **Java + Spring Boot** (Backend)
