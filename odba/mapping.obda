@@ -1,0 +1,774 @@
+[PrefixDeclaration]
+:      http://example.org/ontologia#
+xsd:   http://www.w3.org/2001/XMLSchema#
+
+[MappingDeclaration] @collection [[
+
+mappingId   ayudaCampoCodigoMapping
+target      :ayudaCampo_{AYU_ID} :ayuCodigo "{AYU_CAMPO}"^^xsd:string .
+source      SELECT AYU_ID, AYU_CAMPO FROM SYSTEM.AC_AYUDA_CAMPO
+
+mappingId   ayudaCampoEjemploMapping
+target      :ayudaCampo_{AYU_ID} :ayuEjemplo "{AYU_USO}"^^xsd:string .
+source      SELECT AYU_ID, AYU_USO FROM SYSTEM.AC_AYUDA_CAMPO
+
+mappingId   ayudaCampoModuloMapping
+target      :ayudaCampo_{AYU_ID} :ayuModulo "{AYU_MODULO}"^^xsd:string .
+source      SELECT AYU_ID, AYU_MODULO FROM SYSTEM.AC_AYUDA_CAMPO
+
+mappingId   ayudaCampoNombreMapping
+target      :ayudaCampo_{AYU_ID} :ayuNombre "{AYU_DEFINIC}"^^xsd:string .
+source      SELECT AYU_ID, AYU_DEFINIC FROM SYSTEM.AC_AYUDA_CAMPO
+
+mappingId   ayudaCampoObligaMapping
+target      :ayudaCampo_{AYU_ID} :ayuObliga "{AYU_OBLIGA}"^^xsd:string .
+source      SELECT AYU_ID, AYU_OBLIGA FROM SYSTEM.AC_AYUDA_CAMPO
+
+mappingId   ayudaCampoReglasMapping
+target      :ayudaCampo_{AYU_ID} :ayuReglas "{AYU_REGLAS}"^^xsd:string .
+source      SELECT AYU_ID, AYU_REGLAS FROM SYSTEM.AC_AYUDA_CAMPO
+
+mappingId   criterioBusquedaInstancia
+target      :criterioBusqueda_{CRB_ID} a :CriterioBusqueda .
+source      SELECT CRB_ID FROM SYSTEM.AC_CRITERIOS_BUSQUEDA
+
+mappingId   criterioBusquedaCriterio
+target      :criterioBusqueda_{CRB_ID} :crbCriterio "{CRB_CRITERIO}"^^xsd:string .
+source      SELECT CRB_ID, CRB_CRITERIO FROM SYSTEM.AC_CRITERIOS_BUSQUEDA
+
+mappingId   criterioBusquedaDescripcion
+target      :criterioBusqueda_{CRB_ID} :crbDescripcion "{CRB_DESCRIPCION}"^^xsd:string .
+source      SELECT CRB_ID, CRB_DESCRIPCION FROM SYSTEM.AC_CRITERIOS_BUSQUEDA
+
+mappingId   criterioBusquedaCampoAsociado
+target      :criterioBusqueda_{CRB_ID} :crbCampoAsociado "{CRB_CAMPO_ASOCIADO}"^^xsd:string .
+source      SELECT CRB_ID, CRB_CAMPO_ASOCIADO FROM SYSTEM.AC_CRITERIOS_BUSQUEDA
+
+mappingId   criterioBusquedaTipoComodin
+target      :criterioBusqueda_{CRB_ID} :crbTipoComodin "{CRB_TIPO_COMODIN}"^^xsd:string .
+source      SELECT CRB_ID, CRB_TIPO_COMODIN FROM SYSTEM.AC_CRITERIOS_BUSQUEDA
+
+mappingId   criterioBusquedaUso
+target      :criterioBusqueda_{CRB_ID} :crbUso "{CRB_USO}"^^xsd:string .
+source      SELECT CRB_ID, CRB_USO FROM SYSTEM.AC_CRITERIOS_BUSQUEDA
+
+mappingId   departamentoInstancia
+target      :departamento_{DEP_CODIGO} a :Departamentos .
+source      SELECT DEP_CODIGO FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoCodigo
+target      :departamento_{DEP_CODIGO} :depCodigo "{DEP_CODIGO}"^^xsd:integer .
+source      SELECT DEP_CODIGO FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoNombre
+target      :departamento_{DEP_CODIGO} :depNombre "{DEP_NOMBRE}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_NOMBRE FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoConselleria
+target      :departamento_{DEP_CODIGO} :depConselleria "{DEP_CONSELLERIA}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_CONSELLERIA FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoTipoCentro
+target      :departamento_{DEP_CODIGO} :depTipoCentro "{DEP_TIPO_CENTRO}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_TIPO_CENTRO FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoDireccion
+target      :departamento_{DEP_CODIGO} :depDireccion "{DEP_DIRECCION}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_DIRECCION FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoCP
+target      :departamento_{DEP_CODIGO} :depCP "{DEP_CP}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_CP FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoMunicipio
+target      :departamento_{DEP_CODIGO} :depMunicipio "{DEP_MUNICIPIO}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_MUNICIPIO FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoProvincia
+target      :departamento_{DEP_CODIGO} :depProvincia "{DEP_PROVINCIA}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_PROVINCIA FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoTelefonExt
+target      :departamento_{DEP_CODIGO} :depTelefonExt "{DEP_TELEFON_EXT}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_TELEFON_EXT FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoTelefonInt
+target      :departamento_{DEP_CODIGO} :depTelefonInt "{DEP_TELEFON_INT}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_TELEFON_INT FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoFaxExt
+target      :departamento_{DEP_CODIGO} :depFaxExt "{DEP_FAX_EXT}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_FAX_EXT FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoFaxInt
+target      :departamento_{DEP_CODIGO} :depFaxInt "{DEP_FAX_INT}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_FAX_INT FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoCorreo
+target      :departamento_{DEP_CODIGO} :depCorreo "{DEP_CORREO}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_CORREO FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoReglaCrea
+target      :departamento_{DEP_CODIGO} :depReglaCrea "{DEP_REGLA_CREA}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_REGLA_CREA FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoFechaCrea
+target      :departamento_{DEP_CODIGO} :depFechaCrea "{DEP_FECHA_CREA}"^^xsd:string .
+source      SELECT DEP_CODIGO, TO_CHAR(DEP_FECHA_CREA, 'YYYY-MM-DD') AS DEP_FECHA_CREA FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoHorario
+target      :departamento_{DEP_CODIGO} :depHorario "{DEP_HORARIO}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_HORARIO FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   departamentoRango
+target      :departamento_{DEP_CODIGO} :depRango "{DEP_RANGO}"^^xsd:string .
+source      SELECT DEP_CODIGO, DEP_RANGO FROM SYSTEM.AC_DEPARTAMENTOS
+
+mappingId   entidadLocalInstancia
+target      :entidadLocal_{ENL_CODIGO} a :EntidadLocales .
+source      SELECT ENL_CODIGO FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalCodigo
+target      :entidadLocal_{ENL_CODIGO} :enlCodigo "{ENL_CODIGO}"^^xsd:integer .
+source      SELECT ENL_CODIGO FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalTipo
+target      :entidadLocal_{ENL_CODIGO} :enlTipo "{ENL_TIPO}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_TIPO FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalNombre
+target      :entidadLocal_{ENL_CODIGO} :enlNombre "{ENL_NOMBRE}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_NOMBRE FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalDescripcion
+target      :entidadLocal_{ENL_CODIGO} :enlDescripcion "{ENL_DESCRIPCION}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_DESCRIPCION FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalDireccion
+target      :entidadLocal_{ENL_CODIGO} :enlDireccion "{ENL_DIRECCION}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_DIRECCION FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalCP
+target      :entidadLocal_{ENL_CODIGO} :enlCP "{ENL_CP}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_CP FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalMunicipio
+target      :entidadLocal_{ENL_CODIGO} :enlMunicipio "{ENL_MUNICIPIO}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_MUNICIPIO FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalProvincia
+target      :entidadLocal_{ENL_CODIGO} :enlProvincia "{ENL_PROVINCIA}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_PROVINCIA FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalComarca
+target      :entidadLocal_{ENL_CODIGO} :enlComarca "{ENL_COMARCA}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_COMARCA FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalTelefono
+target      :entidadLocal_{ENL_CODIGO} :enlTelefono "{ENL_TELEFONO}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_TELEFONO FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalFax
+target      :entidadLocal_{ENL_CODIGO} :enlFax "{ENL_FAX}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_FAX FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalCorreo
+target      :entidadLocal_{ENL_CODIGO} :enlCorreo "{ENL_CORREO}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_CORREO FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   entidadLocalWeb
+target      :entidadLocal_{ENL_CODIGO} :enlWeb "{ENL_WEB}"^^xsd:string .
+source      SELECT ENL_CODIGO, ENL_WEB FROM SYSTEM.AC_ENTIDAD_LOCAL
+
+mappingId   empleoPublicoInstancia
+target      :empleoPublico_{EPU_CODIGO} a :EmpleoPublico .
+source      SELECT EPU_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoCodigo
+target      :empleoPublico_{EPU_CODIGO} :epuCodigo "{EPU_CODIGO}"^^xsd:integer .
+source      SELECT EPU_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoConvocatoria
+target      :empleoPublico_{EPU_CODIGO} :epuConvocatoria "{EPU_CONVOCATORIA}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_CONVOCATORIA FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoDepartamento
+target      :empleoPublico_{EPU_CODIGO} :epuDepart "{EPU_DEPART}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_DEPART FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoDescripcion
+target      :empleoPublico_{EPU_CODIGO} :epuDescripcion "{EPU_DESCRIPCION}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_DESCRIPCION FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoDescripPlaza
+target      :empleoPublico_{EPU_CODIGO} :epuDescripPlaza "{EPU_DESCRIP_PLZA}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_DESCRIP_PLZA FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoEnlace
+target      :empleoPublico_{EPU_CODIGO} :epuEnlace "{EPU_ENLACE}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_ENLACE FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoEstadoPlazo
+target      :empleoPublico_{EPU_CODIGO} :epuEstadoPlazo "{EPU_ESTADO_PLAZO}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_ESTADO_PLAZO FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoFechaCrea
+target      :empleoPublico_{EPU_CODIGO} :epuFechaCrea "{EPU_FECHA_CREA}"^^xsd:string .
+source      SELECT EPU_CODIGO, TO_CHAR(EPU_FECHA_CREA, 'YYYY-MM-DD') AS EPU_FECHA_CREA FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoFormaPago
+target      :empleoPublico_{EPU_CODIGO} :epuFormaPago "{EPU_FORMA_PAGO}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_FORMA_PAGO FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoGrupo
+target      :empleoPublico_{EPU_CODIGO} :epuGrupo "{EPU_GRUPO}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_GRUPO FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoInfoPresent
+target      :empleoPublico_{EPU_CODIGO} :epuInfoPresent "{EPU_INFO_PRESENT}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_INFO_PRESENT FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoNumPlaza
+target      :empleoPublico_{EPU_CODIGO} :epuNumPlaza "{EPU_NUM_PLAZA}"^^xsd:integer .
+source      SELECT EPU_CODIGO, EPU_NUM_PLAZA FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoPrueba
+target      :empleoPublico_{EPU_CODIGO} :epuPrueba "{EPU_PRUEBA}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_PRUEBA FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoReduccTasa
+target      :empleoPublico_{EPU_CODIGO} :epuReduccTasa "{EPU_REDUCC_TASA}"^^xsd:integer .
+source      SELECT EPU_CODIGO, EPU_REDUCC_TASA FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoRequisito
+target      :empleoPublico_{EPU_CODIGO} :epuRequisito "{EPU_REQUISITO}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_REQUISITO FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoTasa
+target      :empleoPublico_{EPU_CODIGO} :epuTasa "{EPU_TASA}"^^xsd:integer .
+source      SELECT EPU_CODIGO, EPU_TASA FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoTipoPersonal
+target      :empleoPublico_{EPU_CODIGO} :epuTipoPersonal "{EPU_TIPO_PERSONAL}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_TIPO_PERSONAL FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoTitulEspec
+target      :empleoPublico_{EPU_CODIGO} :epuTitulEspec "{EPU_TITUL_ESPEC}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_TITUL_ESPEC FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoTitulacion
+target      :empleoPublico_{EPU_CODIGO} :epuTitulacion "{EPU_TITULACION}"^^xsd:string .
+source      SELECT EPU_CODIGO, EPU_TITULACION FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoPerteneceADep
+target      :empleoPublico_{EPU_CODIGO} :epuPerteneceADep :departamento_{DEP_CODIGO} .
+source      SELECT EPU_CODIGO, DEP_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE DEP_CODIGO IS NOT NULL
+
+mappingId   etapaCodigo
+target      :etapa_{EPUE_CODIGO} a :EtapaFaseEP .
+source      SELECT EPUE_CODIGO FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueCodigo
+target      :etapa_{EPUE_CODIGO} :epueCodigo "{EPUE_CODIGO}"^^xsd:integer .
+source      SELECT EPUE_CODIGO FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueFase
+target      :etapa_{EPUE_CODIGO} :epueFase "{EPUE_FASE}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_FASE FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueNombre
+target      :etapa_{EPUE_CODIGO} :epueNombre "{EPUE_NOMBRE}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_NOMBRE FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueAbrePlazo
+target      :etapa_{EPUE_CODIGO} :epueAbrePlazo "{EPUE_ABRE_PLAZO}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_ABRE_PLAZO FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueCierrePlazo
+target      :etapa_{EPUE_CODIGO} :epueCierrePlazo "{EPUE_CIERRE_PLAZO}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_CIERRE_PLAZO FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueActual
+target      :etapa_{EPUE_CODIGO} :epueActual "{EPUE_ACTUAL}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_ACTUAL FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueDocEntrega
+target      :etapa_{EPUE_CODIGO} :epueDocEntrega "{EPUE_DOC_ENTREGA}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_DOC_ENTREGA FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueFechaPubli
+target      :etapa_{EPUE_CODIGO} :epueFechaPubli "{EPUE_FECHA_PUBLI}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_FECHA_PUBLI FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueMedioPubli
+target      :etapa_{EPUE_CODIGO} :epueMedioPubli "{EPUE_MEDIO_PUBLI}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_MEDIO_PUBLI FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueNumPubli
+target      :etapa_{EPUE_CODIGO} :epueNumPubli "{EPUE_NUM_PUBLI}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_NUM_PUBLI FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueEnlace
+target      :etapa_{EPUE_CODIGO} :epueEnlace "{EPUE_ENLCE}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_ENLCE FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueInfoPresent
+target      :etapa_{EPUE_CODIGO} :epueInfoPresent "{EPUE_INFO_PRESENT}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_INFO_PRESENT FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaEpueInfoComple
+target      :etapa_{EPUE_CODIGO} :epueInfoComple "{EPUE_INFO_COMPLE}"^^xsd:string .
+source      SELECT EPUE_CODIGO, EPUE_INFO_COMPLE FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   etapaPerteneceEmpleoPublico
+target      :etapa_{EPUE_CODIGO} :epuePerteneceA :empleoPublico_{EPUE_CODEPU} .
+source      SELECT EPUE_CODIGO, EPUE_CODEPU FROM SYSTEM.AC_ETAPA_FASE_EP
+
+mappingId   tramiteServicioCodigo
+target      :tramiteServicio_{TRS_CODIGO} a :TramiteServicio .
+source      SELECT TRS_CODIGO FROM SYSTEM.AC_TRAMITES_SERVICIOS
+
+
+mappingId   tramiteServicioDepart
+target      :tramiteServicio_{TRS_CODIGO} :trsDepart "{TRS_DEPART}"^^xsd:string .
+source      SELECT TRS_CODIGO, TRS_DEPART FROM SYSTEM.AC_TRAMITES_SERVICIOS
+
+mappingId   tramiteServicioDescripcion
+target      :tramiteServicio_{TRS_CODIGO} :trsDescripcion "{TRS_DESCRIPCION}"^^xsd:string .
+source      SELECT TRS_CODIGO, TRS_DESCRIPCION FROM SYSTEM.AC_TRAMITES_SERVICIOS
+
+mappingId   tramiteServicioDestino
+target      :tramiteServicio_{TRS_CODIGO} :trsDestino "{TRS_DESTINO}"^^xsd:string .
+source      SELECT TRS_CODIGO, TRS_DESTINO FROM SYSTEM.AC_TRAMITES_SERVICIOS
+
+mappingId   tramiteServicioObjetivo
+target      :tramiteServicio_{TRS_CODIGO} :trsObjetivo "{TRS_OBJETIVO}"^^xsd:string .
+source      SELECT TRS_CODIGO, TRS_OBJETIVO FROM SYSTEM.AC_TRAMITES_SERVICIOS
+
+mappingId   tramiteServicioTipo
+target      :tramiteServicio_{TRS_CODIGO} :trsTipo "{TRS_TIPO}"^^xsd:string .
+source      SELECT TRS_CODIGO, TRS_TIPO FROM SYSTEM.AC_TRAMITES_SERVICIOS
+
+mappingId   tramiteServicioPerteneceADep
+target      :tramiteServicio_{TRS_CODIGO} :trsPerteneceA :departamento_{DEP_CODIGO} .
+source      SELECT TRS_CODIGO, DEP_CODIGO FROM SYSTEM.AC_TRAMITES_SERVICIOS
+
+mappingId   faseInicioCodigo
+target      :faseInicio_{FINI_CODIGO} a :FaseInicio .
+source      SELECT FINI_CODIGO FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioObjeto
+target      :faseInicio_{FINI_CODIGO} :finiObjeto "{FINI_OBJETO}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_OBJETO FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioRequisitos
+target      :faseInicio_{FINI_CODIGO} :finiRequisitos "{FINI_REQUISITOS}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_REQUISITOS FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioInteresados
+target      :faseInicio_{FINI_CODIGO} :finiInteresados "{FINI_INTERESADOS}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_INTERESADOS FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioPlazoPresent
+target      :faseInicio_{FINI_CODIGO} :finiPlazoPresent "{FINI_PLAZO_PRESENT}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_PLAZO_PRESENT FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioFechaIni
+target      :faseInicio_{FINI_CODIGO} :finiFechaIni "{FINI_FECHA_INI}"^^xsd:string .
+source      SELECT FINI_CODIGO, TO_CHAR(FINI_FECHA_INI, 'YYYY-MM-DD') AS FINI_FECHA_INI FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioFechaFin
+target      :faseInicio_{FINI_CODIGO} :finiFechaFin "{FINI_FECHA_FIN}"^^xsd:string .
+source      SELECT FINI_CODIGO, TO_CHAR(FINI_FECHA_FIN, 'YYYY-MM-DD') AS FINI_FECHA_FIN FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioTasaPago
+target      :faseInicio_{FINI_CODIGO} :finiTasaPago "{FINI_TASA_PAGO}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_TASA_PAGO FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioFormaPresent
+target      :faseInicio_{FINI_CODIGO} :finiForPresent "{FINI_FOR_PRESENT}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_FOR_PRESENT FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioEnlace
+target      :faseInicio_{FINI_CODIGO} :finiEnlace "{FINI_ENLACE}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_ENLACE FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioNorma
+target      :faseInicio_{FINI_CODIGO} :finiNorma "{FINI_NORMA}"^^xsd:string .
+source      SELECT FINI_CODIGO, FINI_NORMA FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInicioPerteneceATramite
+target      :faseInicio_{FINI_CODIGO} :finiPerteneceA :tramiteServicio_{TRS_CODIGO} .
+source      SELECT FINI_CODIGO, TRS_CODIGO FROM SYSTEM.AC_FASE_INICIO
+
+mappingId   faseInstruccionCodigo
+target      :faseInstruccion_{FINS_CODIGO} a :FaseInstruccion .
+source      SELECT FINS_CODIGO FROM SYSTEM.AC_FASE_INSTRUCCION
+
+mappingId   faseInstruccionInfo
+target      :faseInstruccion_{FINS_CODIGO} :finsInfo "{FINS_INFO}"^^xsd:string .
+source      SELECT FINS_CODIGO, FINS_INFO FROM SYSTEM.AC_FASE_INSTRUCCION
+
+mappingId   faseInstruccionCriterios
+target      :faseInstruccion_{FINS_CODIGO} :finsCriteriosValora "{FINS_CRITERIOS_VALORA}"^^xsd:string .
+source      SELECT FINS_CODIGO, FINS_CRITERIOS_VALORA FROM SYSTEM.AC_FASE_INSTRUCCION
+
+mappingId   faseInstruccionDepartamento
+target      :faseInstruccion_{FINS_CODIGO} :finsDeptTramita "{FINS_DEPT_TRAMITA}"^^xsd:string .
+source      SELECT FINS_CODIGO, FINS_DEPT_TRAMITA FROM SYSTEM.AC_FASE_INSTRUCCION
+
+mappingId   faseInstruccionEnlace
+target      :faseInstruccion_{FINS_CODIGO} :finsEnlace "{FINS_ENLACE}"^^xsd:string .
+source      SELECT FINS_CODIGO, FINS_ENLACE FROM SYSTEM.AC_FASE_INSTRUCCION
+
+mappingId   faseInstruccionNorma
+target      :faseInstruccion_{FINS_CODIGO} :finsNorma "{FINS_NORMA}"^^xsd:string .
+source      SELECT FINS_CODIGO, FINS_NORMA FROM SYSTEM.AC_FASE_INSTRUCCION
+
+mappingId   faseInstruccionPerteneceATramite
+target      :faseInstruccion_{FINS_CODIGO} :finsPerteneceA :tramiteServicio_{TRS_CODIGO} .
+source      SELECT FINS_CODIGO, TRS_CODIGO FROM SYSTEM.AC_FASE_INSTRUCCION
+
+mappingId   subfaseAlegacionCodigo
+target      :subfaseAlegacion_{SALG_CODIGO} a :SubFaseAlegacion .
+source      SELECT SALG_CODIGO FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionObjeto
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaObjeto "{SALG_OBJETO}"^^xsd:string .
+source      SELECT SALG_CODIGO, SALG_OBJETO FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionPlazo
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaPlazo "{SALG_PLAZO}"^^xsd:string .
+source      SELECT SALG_CODIGO, SALG_PLAZO FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionFechaInicio
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaFechaIni "{SALG_FECHA_INI}"^^xsd:string .
+source      SELECT SALG_CODIGO, SALG_FECHA_INI FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionFechaFin
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaFechaFin "{SALG_FECHA_FIN}"^^xsd:string .
+source      SELECT SALG_CODIGO, SALG_FECHA_FIN FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionFormaPresentacion
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaForPresent "{SALG_FOR_PRESENT}"^^xsd:string .
+source      SELECT SALG_CODIGO, SALG_FOR_PRESENT FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionEnlace
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaEnlace "{SALG_ENLACE}"^^xsd:string .
+source      SELECT SALG_CODIGO, SALG_ENLACE FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionNorma
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaNorma "{SALG_NORMA}"^^xsd:string .
+source      SELECT SALG_CODIGO, SALG_NORMA FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   subfaseAlegacionPerteneceAFase
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaPerteneceA :faseInstruccion_{FINS_CODIGO} .
+source      SELECT SALG_CODIGO, FINS_CODIGO FROM SYSTEM.AC_SUBFASE_ALEGACION
+
+mappingId   faseFinTipo
+target      :faseFin_{FFIN_CODIGO} a :FaseFin .
+source      SELECT FFIN_CODIGO FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinDeptResol
+target      :faseFin_{FFIN_CODIGO} :ffinDeptResol "{FFIN_DEPT_RESOL}"^^xsd:string .
+source      SELECT FFIN_CODIGO, FFIN_DEPT_RESOL FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinPlazoMax
+target      :faseFin_{FFIN_CODIGO} :ffinPlazoMax "{FFIN_PLZO_MAX}"^^xsd:string .
+source      SELECT FFIN_CODIGO, FFIN_PLZO_MAX FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinDescripcion
+target      :faseFin_{FFIN_CODIGO} :ffinDescripcion "{FFIN_DESCRIPCION}"^^xsd:string .
+source      SELECT FFIN_CODIGO, FFIN_DESCRIPCION FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinProcCobro
+target      :faseFin_{FFIN_CODIGO} :ffinProcCobro "{FFIN_PROCED_COBRO}"^^xsd:string .
+source      SELECT FFIN_CODIGO, FFIN_PROCED_COBRO FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinCuantia
+target      :faseFin_{FFIN_CODIGO} :ffinCuantia "{FFIN_CUANTIA}"^^xsd:decimal .
+source      SELECT FFIN_CODIGO, FFIN_CUANTIA FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinRecurso
+target      :faseFin_{FFIN_CODIGO} :ffinRecurso "{FFIN_RECURSO}"^^xsd:string .
+source      SELECT FFIN_CODIGO, FFIN_RECURSO FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinSancion
+target      :faseFin_{FFIN_CODIGO} :ffinSancion "{FFIN_SANCION}"^^xsd:string .
+source      SELECT FFIN_CODIGO, FFIN_SANCION FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinEnlace
+target      :faseFin_{FFIN_CODIGO} :ffinEnlace "{FFIN_ENLACE}"^^xsd:string .
+source      SELECT FFIN_CODIGO, FFIN_ENLACE FROM SYSTEM.AC_FASE_FIN
+
+mappingId   faseFinPerteneceATramite
+target      :faseFin_{FFIN_CODIGO} :ffinPerteneceA :tramiteServicio_{TRS_CODIGO} .
+source      SELECT FFIN_CODIGO, TRS_CODIGO FROM SYSTEM.AC_FASE_FIN
+
+mappingId   subfaseJustCobroTipo
+target      :subfaseJustCobro_{SJCO_CODIGO} a :SubFaseJustCobro .
+source      SELECT SJCO_CODIGO FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroObjeto
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcObjeto "{SJCO_OBJETO}"^^xsd:string .
+source      SELECT SJCO_CODIGO, SJCO_OBJETO FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroPlazo
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcPlazo "{SJCO_PLAZO}"^^xsd:string .
+source      SELECT SJCO_CODIGO, SJCO_PLAZO FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroFechaIni
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcFechaIni "{SJCO_FECHA_INI}"^^xsd:string .
+source      SELECT SJCO_CODIGO, SJCO_FECHA_INI FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroFechaFin
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcFechaFin "{SJCO_FECHA_FIN}"^^xsd:string .
+source      SELECT SJCO_CODIGO, SJCO_FECHA_FIN FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroForPresent
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcForPresent "{SJCO_FOR_PRESENT}"^^xsd:string .
+source      SELECT SJCO_CODIGO, SJCO_FOR_PRESENT FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroEnlace
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcEnlace "{SJCO_ENLACE}"^^xsd:string .
+source      SELECT SJCO_CODIGO, SJCO_ENLACE FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroNorma
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcNorma "{SJCO_NORMA}"^^xsd:string .
+source      SELECT SJCO_CODIGO, SJCO_NORMA FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   subfaseJustCobroPerteneceAFin
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcPerteneceA :faseFin_{FFIN_CODIGO} .
+source      SELECT SJCO_CODIGO, FFIN_CODIGO FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+
+mappingId   servicioTipo
+target      :servicio_{SERV_CODIGO} a :Servicio .
+source      SELECT SERV_CODIGO FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioObjeto
+target      :servicio_{SERV_CODIGO} :servObjeto "{SERV_OBJETO}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_OBJETO FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioRequisitos
+target      :servicio_{SERV_CODIGO} :servRequisitos "{SERV_REQUISITOS}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_REQUISITOS FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioInteresados
+target      :servicio_{SERV_CODIGO} :servInteresados "{SERV_INTERESADOS}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_INTERESADOS FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioPlazo
+target      :servicio_{SERV_CODIGO} :servPlazo "{SERV_PLAZO}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_PLAZO FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioFechaIni
+target      :servicio_{SERV_CODIGO} :servFechaIni "{SERV_FECHA_INI}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_FECHA_INI FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioFechaFin
+target      :servicio_{SERV_CODIGO} :servFechaFin "{SERV_FECHA_FIN}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_FECHA_FIN FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioInfoComple
+target      :servicio_{SERV_CODIGO} :servInfoComple "{SERV_INFO_COMPLE}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_INFO_COMPLE FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioEnlace
+target      :servicio_{SERV_CODIGO} :servEnlace "{SERV_ENLACE}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_ENLACE FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioNorma
+target      :servicio_{SERV_CODIGO} :servNorma "{SERV_NORMA}"^^xsd:string .
+source      SELECT SERV_CODIGO, SERV_NORMA FROM SYSTEM.AC_SERVICIO
+
+mappingId   servicioPerteneceATramite
+target      :servicio_{SERV_CODIGO} :servicioPerteneceA :tramiteServicio_{SERV_CODTRS} .
+source      SELECT SERV_CODIGO, SERV_CODTRS FROM SYSTEM.AC_SERVICIO
+
+mappingId   operacionTipo
+target      :operacion_{OPE_ID} a :Operacion .
+source      SELECT OPE_ID FROM SYSTEM.AC_OPERACION
+
+mappingId   operacionNombre
+target      :operacion_{OPE_ID} :opeNombre "{OPE_NOMBRE}"^^xsd:string .
+source      SELECT OPE_ID, OPE_NOMBRE FROM SYSTEM.AC_OPERACION
+
+mappingId   operacionDescripcion
+target      :operacion_{OPE_ID} :opeDescripcion "{OPE_DESCRIPCION}"^^xsd:string .
+source      SELECT OPE_ID, OPE_DESCRIPCION FROM SYSTEM.AC_OPERACION
+
+mappingId   personaCodigo
+target      :persona_{PER_CODIGO} :perCodigo "{PER_CODIGO}"^^xsd:integer .
+source      SELECT PER_CODIGO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaTipo
+target      :persona_{PER_CODIGO} a :Personas .
+source      SELECT PER_CODIGO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaIdentificacion
+target      :persona_{PER_CODIGO} :perIdentificacion "{PER_IDENTIFICACION}" .
+source      SELECT PER_CODIGO, PER_IDENTIFICACION FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaNombre
+target      :persona_{PER_CODIGO} :perNombre "{PER_NOMBRE}" .
+source      SELECT PER_CODIGO, PER_NOMBRE FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaApellido1
+target      :persona_{PER_CODIGO} :perApellido1 "{PER_APELLIDO1}" .
+source      SELECT PER_CODIGO, PER_APELLIDO1 FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaApellido2
+target      :persona_{PER_CODIGO} :perApellido2 "{PER_APELLIDO2}" .
+source      SELECT PER_CODIGO, PER_APELLIDO2 FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaGenero
+target      :persona_{PER_CODIGO} :perGenero "{PER_GENERO}" .
+source      SELECT PER_CODIGO, PER_GENERO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaNacionalidad
+target      :persona_{PER_CODIGO} :perNacionalidad "{PER_NACIONALIDAD}" .
+source      SELECT PER_CODIGO, PER_NACIONALIDAD FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaFuncion
+target      :persona_{PER_CODIGO} :perFuncion "{PER_FUNCION}" .
+source      SELECT PER_CODIGO, PER_FUNCION FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaCargo
+target      :persona_{PER_CODIGO} :perCargo "{PER_CARGO}" .
+source      SELECT PER_CODIGO, PER_CARGO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaConselleria
+target      :persona_{PER_CODIGO} :perConselleria "{PER_CONSELLERIA}" .
+source      SELECT PER_CODIGO, PER_CONSELLERIA FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaDespacho
+target      :persona_{PER_CODIGO} :perDespacho "{PER_DESPACHO}" .
+source      SELECT PER_CODIGO, PER_DESPACHO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaDireccion
+target      :persona_{PER_CODIGO} :perDireccion "{PER_DIRECCION}" .
+source      SELECT PER_CODIGO, PER_DIRECCION FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaMunicipio
+target      :persona_{PER_CODIGO} :perMunicipio "{PER_MUNICIPIO}" .
+source      SELECT PER_CODIGO, PER_MUNICIPIO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaProvincia
+target      :persona_{PER_CODIGO} :perProvincia "{PER_PROVINCIA}" .
+source      SELECT PER_CODIGO, PER_PROVINCIA FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaTelefonExt
+target      :persona_{PER_CODIGO} :perTelefonExt "{PER_TELEFON_EXT}" .
+source      SELECT PER_CODIGO, PER_TELEFON_EXT FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaTelefonInt
+target      :persona_{PER_CODIGO} :perTelefonInt "{PER_TELEFON_INT}" .
+source      SELECT PER_CODIGO, PER_TELEFON_INT FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaFaxExterno
+target      :persona_{PER_CODIGO} :perFaxExterno "{PER_FAX_EXTERNO}" .
+source      SELECT PER_CODIGO, PER_FAX_EXTERNO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaFaxInterno
+target      :persona_{PER_CODIGO} :perFaxInterno "{PER_FAX_INTERNO}" .
+source      SELECT PER_CODIGO, PER_FAX_INTERNO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaAdscrito
+target      :persona_{PER_CODIGO} :perAdscrito "{PER_ADSCRITO}" .
+source      SELECT PER_CODIGO, PER_ADSCRITO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaAltogCargo
+target      :persona_{PER_CODIGO} :perAltogCargo "{PER_ALTOGCARGO}"^^xsd:boolean .
+source      SELECT PER_CODIGO, PER_ALTOGCARGO FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaPlanta
+target      :persona_{PER_CODIGO} :perPlanta "{PER_PLANTA}" .
+source      SELECT PER_CODIGO, PER_PLANTA FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaTipoPersonal
+target      :persona_{PER_CODIGO} :perTipoPersonal "{PER_TIPO_PERSONAL}" .
+source      SELECT PER_CODIGO, PER_TIPO_PERSONAL FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaUnidad
+target      :persona_{PER_CODIGO} :perUnidad "{PER_UNIDAD}" .
+source      SELECT PER_CODIGO, PER_UNIDAD FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaVisibilidad
+target      :persona_{PER_CODIGO} :perVisibilidad "{PER_VISIBILIDAD}" .
+source      SELECT PER_CODIGO, PER_VISIBILIDAD FROM SYSTEM.AC_PERSONAS
+
+mappingId   personaPerteneceADep
+target      :persona_{PER_CODIGO} :perPerteneceADep :departamento_{PER_CODDEP} .
+source      SELECT PER_CODIGO, PER_CODDEP FROM SYSTEM.AC_PERSONAS WHERE PER_CODDEP IS NOT NULL
+
+mappingId   personaPerteneceAReg
+target      :persona_{PER_CODIGO} :perPerteneceAReg :registro_{PER_COD_REG} .
+source      SELECT PER_CODIGO, PER_COD_REG FROM SYSTEM.AC_PERSONAS WHERE PER_COD_REG IS NOT NULL
+
+mappingId   registroTipo
+target      :registro_{REG_CODIGO} a :Registros .
+source      SELECT REG_CODIGO FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroNombre
+target :registro_{REG_CODIGO} :regNombre "{REG_NOMBRE}"^^xsd:string .
+source      SELECT REG_CODIGO, REG_NOMBRE FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroTipoTexto
+target      :registro_{REG_CODIGO} :regTipo "{REG_TIPO}" .
+source      SELECT REG_CODIGO, REG_TIPO FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroConselleria
+target      :registro_{REG_CODIGO} :regConselleria "{REG_CONSELLERIA}" .
+source      SELECT REG_CODIGO, REG_CONSELLERIA FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroDireccion
+target      :registro_{REG_CODIGO} :regDireccion "{REG_DIRECCION}" .
+source      SELECT REG_CODIGO, REG_DIRECCION FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroCP
+target      :registro_{REG_CODIGO} :regCP "{REG_CP}" .
+source      SELECT REG_CODIGO, REG_CP FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroMunicipio
+target      :registro_{REG_CODIGO} :regMunicipio "{REG_MUNICIPIO}" .
+source      SELECT REG_CODIGO, REG_MUNICIPIO FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroProvincia
+target      :registro_{REG_CODIGO} :regProvincia "{REG_PROVINCIA}" .
+source      SELECT REG_CODIGO, REG_PROVINCIA FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroCorreo
+target      :registro_{REG_CODIGO} :regCorreo "{REG_CORREO}" .
+source      SELECT REG_CODIGO, REG_CORREO FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroFaxExt
+target      :registro_{REG_CODIGO} :regFaxExt "{REG_FAX_EXT}" .
+source      SELECT REG_CODIGO, REG_FAX_EXT FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroFaxInt
+target      :registro_{REG_CODIGO} :regFaxInt "{REG_FAX_INT}" .
+source      SELECT REG_CODIGO, REG_FAX_INT FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroTelefonExt
+target      :registro_{REG_CODIGO} :regTelefonExt "{REG_TELEFON_EXT}" .
+source      SELECT REG_CODIGO, REG_TELEFON_EXT FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroTelefonInt
+target      :registro_{REG_CODIGO} :regTelefonInt "{REG_TELEFON_INT}" .
+source      SELECT REG_CODIGO, REG_TELEFON_INT FROM SYSTEM.AC_REGISTROS
+
+mappingId   registroHorario
+target      :registro_{REG_CODIGO} :regHorario "{REG_HORARIO}" .
+source      SELECT REG_CODIGO, REG_HORARIO FROM SYSTEM.AC_REGISTROS
+
+mappingId    registroCodDep
+target       :registro_{REG_CODIGO} :regCodDep "{REG_COD_DEP}"^^xsd:integer .
+source       SELECT REG_CODIGO, REG_COD_DEP FROM SYSTEM.AC_REGISTROS
+
+
+mappingId   registroPerteneceADep
+target      :registro_{REG_CODIGO} :regPerteneceADep :departamento_{REG_COD_DEP} .
+source      SELECT REG_CODIGO, REG_COD_DEP FROM SYSTEM.AC_REGISTROS WHERE REG_COD_DEP IS NOT NULL
+
+
+]] 
