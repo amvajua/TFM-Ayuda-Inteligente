@@ -1,0 +1,1913 @@
+@prefix : <http://example.org/ontologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/ontologia#> .
+
+<http://example.org/ontologia> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://example.org/ontologia#string
+:string rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/ontologia#ayudaAsociadoDepartamento
+:ayudaAsociadoDepartamento rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Departamentos ;
+                           rdfs:range :AyudaCampo ;
+                           rdfs:comment "Ayuda asociada al departamento." ;
+                           rdfs:label "ayudaAsociadoDepartamento" .
+
+
+###  http://example.org/ontologia#ayudaAsociadoEELL
+:ayudaAsociadoEELL rdf:type owl:ObjectProperty ;
+                   rdfs:domain :EntidadLocales ;
+                   rdfs:range :AyudaCampo ;
+                   rdfs:comment "Ayuda asociada a entidad local." ;
+                   rdfs:label "ayudaAsociadoEELL" .
+
+
+###  http://example.org/ontologia#ayudaAsociadoEP
+:ayudaAsociadoEP rdf:type owl:ObjectProperty ;
+                 rdfs:domain :EmpleoPublico ;
+                 rdfs:range :AyudaCampo ;
+                 rdfs:comment "Ayuda asociada al módulo de empleo público." ;
+                 rdfs:label "ayudaAsociadoEP" .
+
+
+###  http://example.org/ontologia#ayudaAsociadoPersona
+:ayudaAsociadoPersona rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Personas ;
+                      rdfs:range :AyudaCampo ;
+                      rdfs:comment "Ayuda asociado al módulo persona." ;
+                      rdfs:label "ayudaAsociadoPersona" .
+
+
+###  http://example.org/ontologia#ayudaAsociadoRegistro
+:ayudaAsociadoRegistro rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Registros ;
+                       rdfs:range :AyudaCampo ;
+                       rdfs:comment "Ayuda asociado al módulo registro." ;
+                       rdfs:label "ayudaAsociadoRegistro" .
+
+
+###  http://example.org/ontologia#ayudaAsociadoTramite
+:ayudaAsociadoTramite rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Personas ;
+                      rdfs:range :AyudaCampo ;
+                      rdfs:comment "Ayuda asociado al módulo trámite y servicio." ;
+                      rdfs:label "ayudaAsociadoTramite" .
+
+
+###  http://example.org/ontologia#criterioASociadoEELL
+:criterioASociadoEELL rdf:type owl:ObjectProperty ;
+                      rdfs:domain :EntidadLocales ;
+                      rdfs:range :CriterioBusqueda ;
+                      rdfs:comment "Criterio de búsqueda asociado al módulo entidades locales." ;
+                      rdfs:label "criterioAsociadoEELL" .
+
+
+###  http://example.org/ontologia#criterioAsociadoDepartamento
+:criterioAsociadoDepartamento rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Departamentos ;
+                              rdfs:range :CriterioBusqueda ;
+                              rdfs:comment "Criterio de búsqueda asociado al módulo departamento." ;
+                              rdfs:label "criterioAsociadoDepartamento" .
+
+
+###  http://example.org/ontologia#criterioAsociadoEP
+:criterioAsociadoEP rdf:type owl:ObjectProperty ;
+                    rdfs:domain :EmpleoPublico ;
+                    rdfs:range :CriterioBusqueda ;
+                    rdfs:comment "Criterio de búsqueda asociado al módulo empleo público." ;
+                    rdfs:label "criterioAsociadoEP" .
+
+
+###  http://example.org/ontologia#criterioAsociadoPersona
+:criterioAsociadoPersona rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Personas ;
+                         rdfs:range :CriterioBusqueda ;
+                         rdfs:comment "Criterio de búsqueda asociado al módulo persona." ;
+                         rdfs:label "criterioAsociadoPersona" .
+
+
+###  http://example.org/ontologia#criterioAsociadoRegistro
+:criterioAsociadoRegistro rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Registros ;
+                          rdfs:range :CriterioBusqueda ;
+                          rdfs:comment "Criterio de búsqueda asociado al módulo registro." ;
+                          rdfs:label "criterioAsociadoRegistro" .
+
+
+###  http://example.org/ontologia#criterioAsociadoTramite
+:criterioAsociadoTramite rdf:type owl:ObjectProperty ;
+                         rdfs:domain :TramiteServicio ;
+                         rdfs:range :CriterioBusqueda ;
+                         rdfs:comment "Criterio de búsqueda asociado al módulo trámite y servicio." ;
+                         rdfs:label "criterioAsociadoTramite" .
+
+
+###  http://example.org/ontologia#epPerteneceADep
+:epPerteneceADep rdf:type owl:ObjectProperty ;
+                 rdfs:domain :EmpleoPublico ;
+                 rdfs:range :Departamentos ;
+                 rdfs:comment "Define la relación entre un Departamento y el empleo público." ;
+                 rdfs:label "epPerteneceADep" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :epPerteneceADep ;
+   owl:annotatedProperty rdfs:domain ;
+   owl:annotatedTarget :EmpleoPublico ;
+   rdfs:comment "El empleo público tiene asignado un departamento, órgano o unidad del que pertenece."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :epPerteneceADep ;
+   owl:annotatedProperty rdfs:range ;
+   owl:annotatedTarget :Departamentos ;
+   rdfs:comment "Departamentos de la administración pública de la GVA que ofertan empleo público."
+ ] .
+
+
+###  http://example.org/ontologia#opeAsociadoDepartamento
+:opeAsociadoDepartamento rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Departamentos ;
+                         rdfs:range :Operacion ;
+                         rdfs:comment "Operción asociado al módulo departamento." ;
+                         rdfs:label "opeAsociadoDepartmento" .
+
+
+###  http://example.org/ontologia#opeAsociadoEELL
+:opeAsociadoEELL rdf:type owl:ObjectProperty ;
+                 rdfs:domain :EntidadLocales ;
+                 rdfs:range :Operacion ;
+                 rdfs:comment "Operción asociado al módulo entidad local." ;
+                 rdfs:label "opeAsociadoEELL" .
+
+
+###  http://example.org/ontologia#opeAsociadoEP
+:opeAsociadoEP rdf:type owl:ObjectProperty ;
+               rdfs:domain :EmpleoPublico ;
+               rdfs:range :Operacion ;
+               rdfs:comment "Operción asociado al módulo empleo público." ;
+               rdfs:label "opeAsociadoEP" .
+
+
+###  http://example.org/ontologia#opeAsociadoPersona
+:opeAsociadoPersona rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Personas ;
+                    rdfs:range :Operacion ;
+                    rdfs:comment "Operción asociado al módulo persona." ;
+                    rdfs:label "opeAsociadoPersona" .
+
+
+###  http://example.org/ontologia#opeAsociadoRegistro
+:opeAsociadoRegistro rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Registros ;
+                     rdfs:range :Operacion ;
+                     rdfs:comment "Operción asociado al módulo registro." ;
+                     rdfs:label "opeAsociadoRegistro" .
+
+
+###  http://example.org/ontologia#opeAsociadoTramite
+:opeAsociadoTramite rdf:type owl:ObjectProperty ;
+                    rdfs:domain :TramiteServicio ;
+                    rdfs:range :Operacion ;
+                    rdfs:comment "Operción asociado al módulo trámites y servicios." ;
+                    rdfs:label "opeAsociadoTramite" .
+
+
+###  http://example.org/ontologia#perPerteneceADep
+:perPerteneceADep rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Personas ;
+                  rdfs:range :Departamentos ;
+                  rdfs:comment "Relación que indica a qué departamento pertenece una persona." ;
+                  rdfs:label "perPerteneceADep" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :perPerteneceADep ;
+   owl:annotatedProperty rdfs:domain ;
+   owl:annotatedTarget :Personas ;
+   rdfs:comment "Toda persona pertenece a un departamento sino pertenece a un registro."
+ ] .
+
+
+###  http://example.org/ontologia#perPerteneceAReg
+:perPerteneceAReg rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Personas ;
+                  rdfs:range :Registros ;
+                  rdfs:comment "Relación que indica a qué registro pertenece una persona." ;
+                  rdfs:label "epPerteneceAReg" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :perPerteneceAReg ;
+   owl:annotatedProperty rdfs:domain ;
+   owl:annotatedTarget :Personas ;
+   rdfs:comment "Toda persona pertenece a un registro sino pertenece a un departamento."
+ ] .
+
+
+###  http://example.org/ontologia#regPerteneceADep
+:regPerteneceADep rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Registros ;
+                  rdfs:range :Departamentos ;
+                  rdfs:comment "Relación que indica a qué departamento pertenece un registro." ;
+                  rdfs:label "regPerteneceADep" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :regPerteneceADep ;
+   owl:annotatedProperty rdfs:domain ;
+   owl:annotatedTarget :Registros ;
+   rdfs:comment "Un registro pertenece a un departamento."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :regPerteneceADep ;
+   owl:annotatedProperty rdfs:range ;
+   owl:annotatedTarget :Departamentos ;
+   rdfs:comment "Los departamentos tienen asignados registros."
+ ] .
+
+
+###  http://example.org/ontologia#trsPerteneceADep
+:trsPerteneceADep rdf:type owl:ObjectProperty ;
+                  rdfs:domain :TramiteServicio ;
+                  rdfs:range :Departamentos ;
+                  rdfs:comment "Relación que indica a qué departamento pertenece trámite o servicio." ;
+                  rdfs:label "trsPerteneceADep" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :trsPerteneceADep ;
+   owl:annotatedProperty rdfs:domain ;
+   owl:annotatedTarget :TramiteServicio ;
+   rdfs:comment "Los trámites y servicios pertenecen a un departamento."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :trsPerteneceADep ;
+   owl:annotatedProperty rdfs:range ;
+   owl:annotatedTarget :Departamentos ;
+   rdfs:comment "Los departamentos tienen asignados trámites y servicios."
+ ] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/ontologia#ayuCodigo
+:ayuCodigo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :AyudaCampo ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Identificador técnico del campo (ej. PER_NOMBRE)." ;
+           rdfs:label "ayuCodigo" .
+
+
+###  http://example.org/ontologia#ayuEjemplo
+:ayuEjemplo rdf:type owl:DatatypeProperty ;
+            rdfs:domain :AyudaCampo ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Ejemplo de uso práctico para el campo." ;
+            rdfs:label "ayuEjemplo" .
+
+
+###  http://example.org/ontologia#ayuModulo
+:ayuModulo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :AyudaCampo ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Módulo de la aplicación al que pertenece este campo." ;
+           rdfs:label "ayuModulo" .
+
+
+###  http://example.org/ontologia#ayuNombre
+:ayuNombre rdf:type owl:DatatypeProperty ;
+           rdfs:domain :AyudaCampo ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Nombre descriptivo del campo (ej. Nombre completo)." ;
+           rdfs:label "ayuNombre" .
+
+
+###  http://example.org/ontologia#ayuObliga
+:ayuObliga rdf:type owl:DatatypeProperty ;
+           rdfs:domain :AyudaCampo ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Indica si el campo es obligatorio (Sí/No)." ;
+           rdfs:label "ayuObliga" .
+
+
+###  http://example.org/ontologia#ayuReglas
+:ayuReglas rdf:type owl:DatatypeProperty ;
+           rdfs:domain :AyudaCampo ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Reglas de validación del campo si las hay." ;
+           rdfs:label "ayuReglas" .
+
+
+###  http://example.org/ontologia#crbCampoAsociado
+:crbCampoAsociado rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :CriterioBusqueda ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indica al campo al que se refiere el criterio de búsqueda." ;
+                  rdfs:label "crbCampoAsociado" .
+
+
+###  http://example.org/ontologia#crbCriterio
+:crbCriterio rdf:type owl:DatatypeProperty ;
+             rdfs:domain :CriterioBusqueda ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Nombre del criterio de búsqueda. Ejemplo \"Apellidos\", \"Nombre\", \"Departamento\" etc" ;
+             rdfs:label "crbCriterio" .
+
+
+###  http://example.org/ontologia#crbDescripcion
+:crbDescripcion rdf:type owl:DatatypeProperty ;
+                rdfs:domain :CriterioBusqueda ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Descripción del criterio de búsqueda." ;
+                rdfs:label "crbDescripcion" .
+
+
+###  http://example.org/ontologia#crbTipoComodin
+:crbTipoComodin rdf:type owl:DatatypeProperty ;
+                rdfs:domain :CriterioBusqueda ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Tipo de comodines permitidos al realizar una búsqueda (%,?)" ;
+                rdfs:label "crbTipoComodin" .
+
+
+###  http://example.org/ontologia#crbUso
+:crbUso rdf:type owl:DatatypeProperty ;
+        rdfs:domain :CriterioBusqueda ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Uso del comodín que se puede utilizar en una búsqueda." ;
+        rdfs:label "crbUso" .
+
+
+###  http://example.org/ontologia#depCP
+:depCP rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Departamentos ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Código postal departamento." ;
+       rdfs:label "depCP" .
+
+
+###  http://example.org/ontologia#depCodigo
+:depCodigo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Departamentos ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código identificador del departamento." ;
+           rdfs:label "depCodigo" .
+
+
+###  http://example.org/ontologia#depConselleria
+:depConselleria rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Departamentos ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Conselleria a la que pertenece el departamento." ;
+                rdfs:label "depConselleria" .
+
+
+###  http://example.org/ontologia#depCorreo
+:depCorreo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Departamentos ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Correo organizativo del departamento." ;
+           rdfs:label "depCorreo" .
+
+
+###  http://example.org/ontologia#depDireccion
+:depDireccion rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Departamentos ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Dirección del departamento." ;
+              rdfs:label "depDireccion" .
+
+
+###  http://example.org/ontologia#depFaxExt
+:depFaxExt rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Departamentos ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Fax externo del departamento." ;
+           rdfs:label "depFaxExt" .
+
+
+###  http://example.org/ontologia#depFaxInt
+:depFaxInt rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Departamentos ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Fax interno del departamento." ;
+           rdfs:label "depFaxInt" .
+
+
+###  http://example.org/ontologia#depFechaCrea
+:depFechaCrea rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Departamentos ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Fecha creación del departamento." ;
+              rdfs:label "depFechaCrea" .
+
+
+###  http://example.org/ontologia#depHorario
+:depHorario rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Departamentos ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Horario departamento." ;
+            rdfs:label "depHorario" .
+
+
+###  http://example.org/ontologia#depMunicipio
+:depMunicipio rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Departamentos ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Municipio departamento." ;
+              rdfs:label "depMunicipio" .
+
+
+###  http://example.org/ontologia#depNombre
+:depNombre rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Departamentos ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Nombre formal del departamento." ;
+           rdfs:label "depNombre" .
+
+
+###  http://example.org/ontologia#depProvincia
+:depProvincia rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Departamentos ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Provincia del departamento donde está ubicado." ;
+              rdfs:label "depProvincia" .
+
+
+###  http://example.org/ontologia#depRango
+:depRango rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Departamentos ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Rango al que pertenece el departamento." ;
+          rdfs:label "depRango" .
+
+
+###  http://example.org/ontologia#depReglaCrea
+:depReglaCrea rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Departamentos ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Normativa bajo la cual fue creado el departamento." ;
+              rdfs:label "depReglaCrea" .
+
+
+###  http://example.org/ontologia#depTelefonExt
+:depTelefonExt rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Departamentos ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Teléfono de contacto externo del departamento." ;
+               rdfs:label "depTelefonExt" .
+
+
+###  http://example.org/ontologia#depTelefonInt
+:depTelefonInt rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Departamentos ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Extensión teléfono contacto interna del departamento." ;
+               rdfs:label "depTelefonInt" .
+
+
+###  http://example.org/ontologia#depTipoCentro
+:depTipoCentro rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Departamentos ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Tipo centro del departamento." ;
+               rdfs:label "depTipoCentro" .
+
+
+###  http://example.org/ontologia#enlCP
+:enlCP rdf:type owl:DatatypeProperty ;
+       rdfs:domain :EntidadLocales ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Código Postal de la entidad local." ;
+       rdfs:label "enlCP" .
+
+
+###  http://example.org/ontologia#enlCodigo
+:enlCodigo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EntidadLocales ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código de la entidad local." ;
+           rdfs:label "enlCodigo" .
+
+
+###  http://example.org/ontologia#enlComarca
+:enlComarca rdf:type owl:DatatypeProperty ;
+            rdfs:domain :EntidadLocales ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Comarca de la entidad local." ;
+            rdfs:label "enlComarca" .
+
+
+###  http://example.org/ontologia#enlCorreo
+:enlCorreo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EntidadLocales ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Correo de la entidad local." ;
+           rdfs:label "enlCorreo" .
+
+
+###  http://example.org/ontologia#enlDescripcion
+:enlDescripcion rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EntidadLocales ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Descripcion de la entidad local." ;
+                rdfs:label "enlDescripcion" .
+
+
+###  http://example.org/ontologia#enlDireccion
+:enlDireccion rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EntidadLocales ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Dirección de la entidad local." ;
+              rdfs:label "enlDireccion" .
+
+
+###  http://example.org/ontologia#enlFax
+:enlFax rdf:type owl:DatatypeProperty ;
+        rdfs:domain :EntidadLocales ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Fax de la entidad local." ;
+        rdfs:label "enlFax" .
+
+
+###  http://example.org/ontologia#enlMunicipio
+:enlMunicipio rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EntidadLocales ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Municipio de la entidad local." ;
+              rdfs:label "enlMunicipio" .
+
+
+###  http://example.org/ontologia#enlProvincia
+:enlProvincia rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EntidadLocales ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Provincia de la entidad local." ;
+              rdfs:label "enlProvincia" .
+
+
+###  http://example.org/ontologia#enlTelefono
+:enlTelefono rdf:type owl:DatatypeProperty ;
+             rdfs:domain :EntidadLocales ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Teléfono de la entidad local." ;
+             rdfs:label "enlTelefono" .
+
+
+###  http://example.org/ontologia#enlTipo
+:enlTipo rdf:type owl:DatatypeProperty ;
+         rdfs:domain :EntidadLocales ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Tipo de entidad local: ayuntamiento, mancomunidad, diputación etc." ;
+         rdfs:label "enlTipo" .
+
+
+###  http://example.org/ontologia#enlWeb
+:enlWeb rdf:type owl:DatatypeProperty ;
+        rdfs:domain :EntidadLocales ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Web de la entidad local." ;
+        rdfs:label "enlWeb" .
+
+
+###  http://example.org/ontologia#epuCodigo
+:epuCodigo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EmpleoPublico ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código del empleo público." ;
+           rdfs:label "epuCodigo" .
+
+
+###  http://example.org/ontologia#epuConvocatoria
+:epuConvocatoria rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :EmpleoPublico ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Convocatoria del empleo público ofertado." ;
+                 rdfs:label "epuConvocatoria" .
+
+
+###  http://example.org/ontologia#epuDepart
+:epuDepart rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EmpleoPublico ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Departamento asignado al empleo público." ;
+           rdfs:label "epuDepart" .
+
+
+###  http://example.org/ontologia#epuDescripPlaza
+:epuDescripPlaza rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :EmpleoPublico ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Descripción de la plaza del empleo público ofertado." ;
+                 rdfs:label "epuDescripPlaza" .
+
+
+###  http://example.org/ontologia#epuDescripcion
+:epuDescripcion rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EmpleoPublico ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Descripción del empleo público." ;
+                rdfs:label "epuDescripcion" .
+
+
+###  http://example.org/ontologia#epuEnlace
+:epuEnlace rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EmpleoPublico ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Enlace del empleo público." ;
+           rdfs:label "epueEnlace" .
+
+
+###  http://example.org/ontologia#epuEstadoPlazo
+:epuEstadoPlazo rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EmpleoPublico ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Estado del plazo del empleo público." ;
+                rdfs:label "epuEstadoPlazo" .
+
+
+###  http://example.org/ontologia#epuFechaCrea
+:epuFechaCrea rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EmpleoPublico ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Fecha creación del empleo público." ;
+              rdfs:label "epuFechaCrea" .
+
+
+###  http://example.org/ontologia#epuFormaPago
+:epuFormaPago rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EmpleoPublico ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Forma de pago del empleo público." ;
+              rdfs:label "epuFormaPago" .
+
+
+###  http://example.org/ontologia#epuGrupo
+:epuGrupo rdf:type owl:DatatypeProperty ;
+          rdfs:domain :EmpleoPublico ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Grupo al que va dirigida la oferta de empleo público." ;
+          rdfs:label "epuGrupo" .
+
+
+###  http://example.org/ontologia#epuInfoPresent
+:epuInfoPresent rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EmpleoPublico ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Información de presentación del empleo público." ;
+                rdfs:label "epuInfoPresent" .
+
+
+###  http://example.org/ontologia#epuNumPlaza
+:epuNumPlaza rdf:type owl:DatatypeProperty ;
+             rdfs:domain :EmpleoPublico ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "Número de plazas ofertedas del empleo público." ;
+             rdfs:label "epuNumPlaza" .
+
+
+###  http://example.org/ontologia#epuPrueba
+:epuPrueba rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EmpleoPublico ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Prueba del empleo público." ;
+           rdfs:label "epuPrueba" .
+
+
+###  http://example.org/ontologia#epuReduccTasa
+:epuReduccTasa rdf:type owl:DatatypeProperty ;
+               rdfs:domain :EmpleoPublico ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "Reducción de tasas del empleo público." ;
+               rdfs:label "epuReduccTasa" .
+
+
+###  http://example.org/ontologia#epuRequisito
+:epuRequisito rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EmpleoPublico ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Requisitos del empleo público." ;
+              rdfs:label "epuRequisito" .
+
+
+###  http://example.org/ontologia#epuTasa
+:epuTasa rdf:type owl:DatatypeProperty ;
+         rdfs:domain :EmpleoPublico ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Tasas del empleo público." ;
+         rdfs:label "epuTasa" .
+
+
+###  http://example.org/ontologia#epuTipoPersonal
+:epuTipoPersonal rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :EmpleoPublico ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Tipo personal al que va el empleo público ofertado." ;
+                 rdfs:label "epuTipoPersonal" .
+
+
+###  http://example.org/ontologia#epuTitulEspec
+:epuTitulEspec rdf:type owl:DatatypeProperty ;
+               rdfs:domain :EmpleoPublico ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Titulación específica del empleo público." ;
+               rdfs:label "epuTitulEspec" .
+
+
+###  http://example.org/ontologia#epuTitulacion
+:epuTitulacion rdf:type owl:DatatypeProperty ;
+               rdfs:domain :EmpleoPublico ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Titulación a la que va dirigida la oferta de empleo público." ;
+               rdfs:label "epuTitulacion" .
+
+
+###  http://example.org/ontologia#epueAbrePlazo
+:epueAbrePlazo rdf:type owl:DatatypeProperty ;
+               rdfs:domain :EtapaFaseEP ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Abre plazo de la etapa del empleo público." ;
+               rdfs:label "epueAbrePlazo" .
+
+
+###  http://example.org/ontologia#epueActual
+:epueActual rdf:type owl:DatatypeProperty ;
+            rdfs:domain :EtapaFaseEP ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Etapa actual sí/no de la etapa del empleo público." ;
+            rdfs:label "epueActual" .
+
+
+###  http://example.org/ontologia#epueCierrePlazo
+:epueCierrePlazo rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :EtapaFaseEP ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Cierra plazo de la etapa del empleo público." ;
+                 rdfs:label "epueCierrePlazo" .
+
+
+###  http://example.org/ontologia#epueCodigo
+:epueCodigo rdf:type owl:DatatypeProperty ;
+            rdfs:domain :EtapaFaseEP ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "Código de la etapa del empleo público." ;
+            rdfs:label "epueCodigo" .
+
+
+###  http://example.org/ontologia#epueDocEntrega
+:epueDocEntrega rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EtapaFaseEP ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Documentación a entregar de la etapa del empleo público." ;
+                rdfs:label "epueDocEntrega" .
+
+
+###  http://example.org/ontologia#epueEnlce
+:epueEnlce rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EtapaFaseEP ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Enlace de la etapa del empleo público." ;
+           rdfs:label "epueEnlace" .
+
+
+###  http://example.org/ontologia#epueFase
+:epueFase rdf:type owl:DatatypeProperty ;
+          rdfs:domain :EtapaFaseEP ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Fase de la etapa del empleo público." ;
+          rdfs:label "epueFase" .
+
+
+###  http://example.org/ontologia#epueFechaPubli
+:epueFechaPubli rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EtapaFaseEP ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Fecha publicación de la etapa del empleo público." ;
+                rdfs:label "epueFechaPubli" .
+
+
+###  http://example.org/ontologia#epueInfoComple
+:epueInfoComple rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EtapaFaseEP ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Información complementaria de la etapa del empleo público." ;
+                rdfs:label "epueInfoComple" .
+
+
+###  http://example.org/ontologia#epueInfoPresent
+:epueInfoPresent rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :EtapaFaseEP ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Información presentación de la etapa del empleo público." ;
+                 rdfs:label "epueInfoPresent" .
+
+
+###  http://example.org/ontologia#epueMedioPubli
+:epueMedioPubli rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EtapaFaseEP ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Medio publicación de la etapa del empleo público." ;
+                rdfs:label "epueMedioPubli" .
+
+
+###  http://example.org/ontologia#epueNombre
+:epueNombre rdf:type owl:DatatypeProperty ;
+            rdfs:domain :EtapaFaseEP ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Nombre de la etapa del empleo público." ;
+            rdfs:label "epueNombre" .
+
+
+###  http://example.org/ontologia#epueNumPubli
+:epueNumPubli rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EtapaFaseEP ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Número de publicación de la etapa del empleo público." ;
+              rdfs:label "epueNumPubli" .
+
+
+###  http://example.org/ontologia#ffinCuantia
+:ffinCuantia rdf:type owl:DatatypeProperty ;
+             rdfs:domain :FaseFin ;
+             rdfs:range xsd:decimal ;
+             rdfs:comment "Cuantía de la fase fin del trámite." ;
+             rdfs:label "ffinCuantia" .
+
+
+###  http://example.org/ontologia#ffinDeptResol
+:ffinDeptResol rdf:type owl:DatatypeProperty ;
+               rdfs:domain :FaseFin ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Departamento de resolución de la fase fin del trámite." ;
+               rdfs:label "ffinDeptResol" .
+
+
+###  http://example.org/ontologia#ffinDescripcion
+:ffinDescripcion rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FaseFin ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Descripción de la fase fin del trámite." ;
+                 rdfs:label "ffinDescripcion" .
+
+
+###  http://example.org/ontologia#ffinEnlace
+:ffinEnlace rdf:type owl:DatatypeProperty ;
+            rdfs:domain :FaseFin ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Enlace de la fase fin del trámite." ;
+            rdfs:label "ffinEnlace" .
+
+
+###  http://example.org/ontologia#ffinPlazoMax
+:ffinPlazoMax rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FaseFin ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Plazo máximo de resolución de la fase fin del trámite." ;
+              rdfs:label "ffinPlazoMax" .
+
+
+###  http://example.org/ontologia#ffinProcCobro
+:ffinProcCobro rdf:type owl:DatatypeProperty ;
+               rdfs:domain :FaseFin ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Procedimiento de cobro de la fase fin del trámite." ;
+               rdfs:label "ffinProcCobro" .
+
+
+###  http://example.org/ontologia#ffinRecurso
+:ffinRecurso rdf:type owl:DatatypeProperty ;
+             rdfs:domain :FaseFin ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Recursos de la fase fin del trámite." ;
+             rdfs:label "ffinRecurso" .
+
+
+###  http://example.org/ontologia#ffinSancion
+:ffinSancion rdf:type owl:DatatypeProperty ;
+             rdfs:domain :FaseFin ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Sanciones de la fase fin del trámite." ;
+             rdfs:label "ffinSancion" .
+
+
+###  http://example.org/ontologia#finiEnlace
+:finiEnlace rdf:type owl:DatatypeProperty ;
+            rdfs:domain :FaseInicio ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Enlace de la fase inicio del trámite." ;
+            rdfs:label "finiEnlace" .
+
+
+###  http://example.org/ontologia#finiFechaFin
+:finiFechaFin rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FaseInicio ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Fecha fin de la fase inicio del trámite." ;
+              rdfs:label "finiFechaFin" .
+
+
+###  http://example.org/ontologia#finiFechaIni
+:finiFechaIni rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FaseInicio ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Fecha inicio de la fase inicio del trámite." ;
+              rdfs:label "finiFechaIni" .
+
+
+###  http://example.org/ontologia#finiForPresent
+:finiForPresent rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FaseInicio ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Forma de presentación de la fase inicio del trámite." ;
+                rdfs:label "finiForPresent" .
+
+
+###  http://example.org/ontologia#finiInteresados
+:finiInteresados rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FaseInicio ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Interesados de la fase inicio del trámite." ;
+                 rdfs:label "finiInteresados" .
+
+
+###  http://example.org/ontologia#finiNorma
+:finiNorma rdf:type owl:DatatypeProperty ;
+           rdfs:domain :FaseInicio ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Normativa de la fase inicio del trámite." ;
+           rdfs:label "finiNorma" .
+
+
+###  http://example.org/ontologia#finiObjeto
+:finiObjeto rdf:type owl:DatatypeProperty ;
+            rdfs:domain :FaseInicio ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Objetivo de la fase de inicio del trámite." ;
+            rdfs:label "finiObjeto" .
+
+
+###  http://example.org/ontologia#finiPlazoPresent
+:finiPlazoPresent rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :FaseInicio ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Plazo  de presentación de la fase inicio del trámite." ;
+                  rdfs:label "finiPlazoPresent" .
+
+
+###  http://example.org/ontologia#finiRequisitos
+:finiRequisitos rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FaseInicio ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Requisitos de la fase inicio del trámite." ;
+                rdfs:label "finiRequisitos" .
+
+
+###  http://example.org/ontologia#finiTasaPago
+:finiTasaPago rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FaseInicio ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Tasas de pago de la fase inicio del trámite." ;
+              rdfs:label "finiTasaPago" .
+
+
+###  http://example.org/ontologia#finsCriteriosValora
+:finsCriteriosValora rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FaseInstruccion ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Criterios de valoración en la fase de instrucción del trámite." ;
+                     rdfs:label "finsCriteriosValora" .
+
+
+###  http://example.org/ontologia#finsDeptTramita
+:finsDeptTramita rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FaseInstruccion ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Departamento de tramitación en la fase de instrucción del trámite." ;
+                 rdfs:label "finsDeptTramita" .
+
+
+###  http://example.org/ontologia#finsEnlace
+:finsEnlace rdf:type owl:DatatypeProperty ;
+            rdfs:domain :FaseInstruccion ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Enlace en la fase de instrucción del trámite." ;
+            rdfs:label "finsEnlace" .
+
+
+###  http://example.org/ontologia#finsInfo
+:finsInfo rdf:type owl:DatatypeProperty ;
+          rdfs:domain :FaseInstruccion ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Información de la tramitación en la fase de instrucción del trámite." ;
+          rdfs:label "finsInfo" .
+
+
+###  http://example.org/ontologia#finsNorma
+:finsNorma rdf:type owl:DatatypeProperty ;
+           rdfs:domain :FaseInstruccion ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Normativa en la fase de instrucción del trámite." ;
+           rdfs:label "finsNorma" .
+
+
+###  http://example.org/ontologia#opeDescripcion
+:opeDescripcion rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Operacion ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Descripción de la operacion que se puede realizar." ;
+                rdfs:label "opeDescripcion" .
+
+
+###  http://example.org/ontologia#opeNombre
+:opeNombre rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Operacion ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Nombre de la operación (Ej. \"Consultar\", \"Insertar\", \"Modificar\", \"Eliminar\")." ;
+           rdfs:label "opeNombre" .
+
+
+###  http://example.org/ontologia#perAdscrito
+:perAdscrito rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Personas ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Indica si la persona está adscrita a un puesto de trabajo." ;
+             rdfs:label "perAdscrito" .
+
+
+###  http://example.org/ontologia#perAltogCargo
+:perAltogCargo rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Personas ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Indica si la persona ocupa un alto Cargo." ;
+               rdfs:label "perAltoCargo" .
+
+
+###  http://example.org/ontologia#perApellido1
+:perApellido1 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Personas ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Apellido primero de la persona." ;
+              rdfs:label "perApellido1" .
+
+
+###  http://example.org/ontologia#perApellido2
+:perApellido2 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Personas ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Apellido segundo de la persona." ;
+              rdfs:label "perApellido2" .
+
+
+###  http://example.org/ontologia#perCargo
+:perCargo rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Personas ;
+          rdfs:range xsd:string ;
+          rdfs:comment "gpeCargo ocupado en caso de alto Cargo." ;
+          rdfs:label "perCargo" .
+
+
+###  http://example.org/ontologia#perCodDep
+:perCodDep rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Personas ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código departamento asociado a la persona." ;
+           rdfs:label "perCodDep" .
+
+
+###  http://example.org/ontologia#perCodigo
+:perCodigo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Personas ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código identificativo de la persona dentro de la aplicación." ;
+           rdfs:label "perCodigo" .
+
+
+###  http://example.org/ontologia#perConselleria
+:perConselleria rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Personas ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Conselleria a la que pertenece la persona." ;
+                rdfs:label "perConselleria" .
+
+
+###  http://example.org/ontologia#perDespacho
+:perDespacho rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Personas ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Despacho de la persona donde se encuentra trabajando." ;
+             rdfs:label "perDespacho" .
+
+
+###  http://example.org/ontologia#perDireccion
+:perDireccion rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Personas ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Direcciòn de trabajo de la persona." ;
+              rdfs:label "perDireccion" .
+
+
+###  http://example.org/ontologia#perFaxExterno
+:perFaxExterno rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Personas ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Fax externo de la oficina." ;
+               rdfs:label "perFaxExterno" .
+
+
+###  http://example.org/ontologia#perFaxInterno
+:perFaxInterno rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Personas ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Fax interno de la oficina." ;
+               rdfs:label "perFaxInterno" .
+
+
+###  http://example.org/ontologia#perFuncion
+:perFuncion rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Personas ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Función desempeñada dentro de la organización." ;
+            rdfs:label "perFuncion" .
+
+
+###  http://example.org/ontologia#perGenero
+:perGenero rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Personas ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Género de la persona femenino o masculino." ;
+           rdfs:label "perGenero" .
+
+
+###  http://example.org/ontologia#perIdentificacion
+:perIdentificacion rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Personas ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Número identidad de la persona DNI/NIF/NIE." ;
+                   rdfs:label "perIdentificacion" .
+
+
+###  http://example.org/ontologia#perMunicipio
+:perMunicipio rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Personas ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Municipio donde trabaja la persona." ;
+              rdfs:label "perMunicipio" .
+
+
+###  http://example.org/ontologia#perNacionalidad
+:perNacionalidad rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Personas ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Nacionalidad de la persona." ;
+                 rdfs:label "perNacionalidad" .
+
+
+###  http://example.org/ontologia#perNombre
+:perNombre rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Personas ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Nombre de la persona que figura en su documento de identidad." ;
+           rdfs:label "perNombre" .
+
+
+###  http://example.org/ontologia#perPlanta
+:perPlanta rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Personas ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Ubicación de la planta donde trabaja la persona." ;
+           rdfs:label "perPlanta" .
+
+
+###  http://example.org/ontologia#perProvincia
+:perProvincia rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Personas ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Provincia donde trabaja la persona." ;
+              rdfs:label "perProvincia" .
+
+
+###  http://example.org/ontologia#perTelefonExt
+:perTelefonExt rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Personas ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Teléfono de la oficina donde está ubicado." ;
+               rdfs:label "perTelefonExt" .
+
+
+###  http://example.org/ontologia#perTelefonInt
+:perTelefonInt rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Personas ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Extensión interna de la oficina." ;
+               rdfs:label "perTelefonInt" .
+
+
+###  http://example.org/ontologia#perTipoPersonal
+:perTipoPersonal rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Personas ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Define si la persona es Interno o Externo." ;
+                 rdfs:label "perTipoPersonal" .
+
+
+###  http://example.org/ontologia#perUnidad
+:perUnidad rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Personas ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Departamento u órgano al que es adscrita la persona." ;
+           rdfs:label "perUnidad" .
+
+
+###  http://example.org/ontologia#perVisibilidad
+:perVisibilidad rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Personas ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Define si la persona es Interna, Oculta o Pública." ;
+                rdfs:label "perVisibilidad" .
+
+
+###  http://example.org/ontologia#regCP
+:regCP rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Registros ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Código postal dirección del registro." ;
+       rdfs:label "regCP" .
+
+
+###  http://example.org/ontologia#regCodDep
+:regCodDep rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Registros ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código departamento asociado al registro." ;
+           rdfs:label "regCodDep" .
+
+
+###  http://example.org/ontologia#regCodigo
+:regCodigo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Registros ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código interno asociado al registro." ;
+           rdfs:label "regCodigo" .
+
+
+###  http://example.org/ontologia#regConselleria
+:regConselleria rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Registros ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Conselleria a la que pertenece el registro." ;
+                rdfs:label "regConselleria" .
+
+
+###  http://example.org/ontologia#regCorreo
+:regCorreo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Registros ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Correo electrónico del registro." ;
+           rdfs:label "regCorreo" .
+
+
+###  http://example.org/ontologia#regDireccion
+:regDireccion rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Registros ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Dirección donde se encuentra ubicado el registro." ;
+              rdfs:label "regDireccion" .
+
+
+###  http://example.org/ontologia#regFaxExt
+:regFaxExt rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Registros ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Fax externo del registro." ;
+           rdfs:label "regFaxExt" .
+
+
+###  http://example.org/ontologia#regFaxInt
+:regFaxInt rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Registros ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Fax interno del registro." ;
+           rdfs:label "regFaxInt" .
+
+
+###  http://example.org/ontologia#regHorario
+:regHorario rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Registros ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Horario del registro para atención al ciudadano." ;
+            rdfs:label "regHorario" .
+
+
+###  http://example.org/ontologia#regMunicipio
+:regMunicipio rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Registros ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Municipio del registro." ;
+              rdfs:label "regMunicipio" .
+
+
+###  http://example.org/ontologia#regNombre
+:regNombre rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Registros ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Nombre asignado al registro." ;
+           rdfs:label "regNombre" .
+
+
+###  http://example.org/ontologia#regProvincia
+:regProvincia rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Registros ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Provincia del registro." ;
+              rdfs:label "regProvincia" .
+
+
+###  http://example.org/ontologia#regTelefonExt
+:regTelefonExt rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Registros ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Teléfono externo del registro." ;
+               rdfs:label "regTelefonExt" .
+
+
+###  http://example.org/ontologia#regTelefonInt
+:regTelefonInt rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Registros ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Teléfono interno del registro." ;
+               rdfs:label "regTelefonInt" .
+
+
+###  http://example.org/ontologia#regTipo
+:regTipo rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Registros ;
+         rdfs:range xsd:string ;
+         rdfs:comment """Tipo de registro:
+Registro propio: es el que se presta en las oficinas PROP PROPIAS, en ellos se puede registrar cualquier documento dirigido a la Administración General del Estado, comunidades autónomas y entidades locales (en oficinas PROP de Alicante, Castellón y Valencia, oficina PROP Elche/Elx y en la oficina PROP Mixta de Requena).
+Registro concertado con una entidad local: se puede registrar cualquier documento dirigido a la Administración General del Estado, comunidades autónomas y entidades locales (resto de oficinas PROP).""" ;
+         rdfs:label "regTipo" .
+
+
+###  http://example.org/ontologia#servEnlace
+:servEnlace rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Servicio ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Enlace del servicio." ;
+            rdfs:label "servEnlace" .
+
+
+###  http://example.org/ontologia#servFechaFin
+:servFechaFin rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Servicio ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Fecha fin del servicio." ;
+              rdfs:label "servFechaFin" .
+
+
+###  http://example.org/ontologia#servFechaIni
+:servFechaIni rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Servicio ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Fecha inicio del servicio." ;
+              rdfs:label "servFechaIni" .
+
+
+###  http://example.org/ontologia#servInfoComple
+:servInfoComple rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Servicio ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Información complementaria del servicio." ;
+                rdfs:label "servInfoComple" .
+
+
+###  http://example.org/ontologia#servInteresados
+:servInteresados rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Servicio ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Interesados del servicio." ;
+                 rdfs:label "servInteresados" .
+
+
+###  http://example.org/ontologia#servNorma
+:servNorma rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Servicio ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Normativa del servicio." ;
+           rdfs:label "servNorma" .
+
+
+###  http://example.org/ontologia#servObjeto
+:servObjeto rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Servicio ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Objeto del servicio." ;
+            rdfs:label "servObjeto" .
+
+
+###  http://example.org/ontologia#servPlazo
+:servPlazo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Servicio ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Plazo del servicio." ;
+           rdfs:label "servPlazo" .
+
+
+###  http://example.org/ontologia#servRequisitos
+:servRequisitos rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Servicio ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Requisitos del servicio." ;
+                rdfs:label "servRequisitos" .
+
+
+###  http://example.org/ontologia#sffjcEnlace
+:sffjcEnlace rdf:type owl:DatatypeProperty ;
+             rdfs:domain :SubFaseJustCobro ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Enlace de justificación y cobro de la fase de finalización." ;
+             rdfs:label "sffjcEnlace" .
+
+
+###  http://example.org/ontologia#sffjcFechaFin
+:sffjcFechaFin rdf:type owl:DatatypeProperty ;
+               rdfs:domain :SubFaseJustCobro ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Fecha fin de justificación y cobro de la fase de finalización." ;
+               rdfs:label "sffjcFechaFin" .
+
+
+###  http://example.org/ontologia#sffjcFechaIni
+:sffjcFechaIni rdf:type owl:DatatypeProperty ;
+               rdfs:domain :SubFaseJustCobro ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Fecha inicio de justificación y cobro de la fase de finalización." ;
+               rdfs:label "sffjcFechaIni" .
+
+
+###  http://example.org/ontologia#sffjcForPresent
+:sffjcForPresent rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :SubFaseJustCobro ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Forma de presentación de justificación y cobro de la fase de finalización." ;
+                 rdfs:label "sffjcForPresent" .
+
+
+###  http://example.org/ontologia#sffjcNorma
+:sffjcNorma rdf:type owl:DatatypeProperty ;
+            rdfs:domain :SubFaseJustCobro ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Normativa de justificación y cobro de la fase de finalización." ;
+            rdfs:label "sffjcNorma" .
+
+
+###  http://example.org/ontologia#sffjcObjeto
+:sffjcObjeto rdf:type owl:DatatypeProperty ;
+             rdfs:domain :SubFaseJustCobro ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Objeto de la subfase de justificación y cobro de la fase de finalización." ;
+             rdfs:label "sffjcObjeto" .
+
+
+###  http://example.org/ontologia#sffjcPlazo
+:sffjcPlazo rdf:type owl:DatatypeProperty ;
+            rdfs:domain :SubFaseJustCobro ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Plazo presentación de justificación y cobro de la fase de finalización." ;
+            rdfs:label "sffjcPlazo" .
+
+
+###  http://example.org/ontologia#sinsaEnlace
+:sinsaEnlace rdf:type owl:DatatypeProperty ;
+             rdfs:domain :SubFaseAlegacion ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Enlace de la subfase de alegación en la fase de instrucción." ;
+             rdfs:label "sinsaEnlace" .
+
+
+###  http://example.org/ontologia#sinsaFechaFin
+:sinsaFechaFin rdf:type owl:DatatypeProperty ;
+               rdfs:domain :SubFaseAlegacion ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Fecha fin de la subfase de alegación en la fase de instrucción." ;
+               rdfs:label "sinsaFechaFin" .
+
+
+###  http://example.org/ontologia#sinsaFechaIni
+:sinsaFechaIni rdf:type owl:DatatypeProperty ;
+               rdfs:domain :SubFaseAlegacion ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Fecha inicio de la subfase de alegación en la fase de instrucción." ;
+               rdfs:label "sinsaFechaIni" .
+
+
+###  http://example.org/ontologia#sinsaForPresent
+:sinsaForPresent rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :SubFaseAlegacion ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Forma de presentación de la subfase de alegación en la fase de instrucción." ;
+                 rdfs:label "sinsaForPresent" .
+
+
+###  http://example.org/ontologia#sinsaNorma
+:sinsaNorma rdf:type owl:DatatypeProperty ;
+            rdfs:domain :SubFaseAlegacion ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Normativa de la subfase de alegación en la fase de instrucción." ;
+            rdfs:label "sinsaNorma" .
+
+
+###  http://example.org/ontologia#sinsaObjeto
+:sinsaObjeto rdf:type owl:DatatypeProperty ;
+             rdfs:domain :SubFaseAlegacion ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Objetivo de la subfase de alegación en la fase de instrucción." ;
+             rdfs:label "sinsaObjeto" .
+
+
+###  http://example.org/ontologia#sinsaPlazo
+:sinsaPlazo rdf:type owl:DatatypeProperty ;
+            rdfs:domain :SubFaseAlegacion ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Plazo de la subfase de alegación en la fase de instrucción." ;
+            rdfs:label "sinsaPlazo" .
+
+
+###  http://example.org/ontologia#trsCodigo
+:trsCodigo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :TramiteServicio ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código del trámite o servicio, dependiendo del tipo." ;
+           rdfs:label "trsCodigo" .
+
+
+###  http://example.org/ontologia#trsDepart
+:trsDepart rdf:type owl:DatatypeProperty ;
+           rdfs:domain :TramiteServicio ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Relación con departamento que gestiona el trámite." ;
+           rdfs:label "trsDepart" .
+
+
+###  http://example.org/ontologia#trsDescripcion
+:trsDescripcion rdf:type owl:DatatypeProperty ;
+                rdfs:domain :TramiteServicio ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Explicación detallada del trámite o servicio." ;
+                rdfs:label "trsDescripcion" .
+
+
+###  http://example.org/ontologia#trsDestino
+:trsDestino rdf:type owl:DatatypeProperty ;
+            rdfs:domain :TramiteServicio ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Define si el trámite o servicio está dirigido a ciudadanía, administración, empresas o es interno." ;
+            rdfs:label "trsDestino" .
+
+
+###  http://example.org/ontologia#trsObjetivo
+:trsObjetivo rdf:type owl:DatatypeProperty ;
+             rdfs:domain :TramiteServicio ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Descripción del objetivo de trámite o servicio." ;
+             rdfs:label "trsObjeto" .
+
+
+###  http://example.org/ontologia#trsTipo
+:trsTipo rdf:type owl:DatatypeProperty ;
+         rdfs:domain :TramiteServicio ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Tipo de procedimiento, trámite o servicio." ;
+         rdfs:label "trsTipo" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/ontologia#AyudaCampo
+:AyudaCampo rdf:type owl:Class ;
+            rdfs:comment "Ayuda campo para cada uno de lso módulos del sistema." ;
+            rdfs:label "AyudaCampo" .
+
+
+###  http://example.org/ontologia#CriterioBusqueda
+:CriterioBusqueda rdf:type owl:Class ;
+                  rdfs:comment "Representa un criterio específico utilizado para buscar información sobre las entidades como pueden ser Personas, Departamentos." ;
+                  rdfs:label "CriterioBusqueda" .
+
+
+###  http://example.org/ontologia#Departamentos
+:Departamentos rdf:type owl:Class ;
+               owl:hasKey _:genid9 ;
+               rdfs:comment "Departamentos de la administración pública de la Generalitat." ;
+               rdfs:label "Departamentos" .
+
+_:genid9 rdf:type rdf:List ;
+          rdf:first :depCodigo ;
+          rdf:rest rdf:nil .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Departamentos ;
+   owl:annotatedProperty owl:hasKey ;
+   owl:annotatedTarget _:genid9 ;
+   rdfs:comment "Clave primaria departamento."
+ ] .
+
+
+###  http://example.org/ontologia#EmpleoPublico
+:EmpleoPublico rdf:type owl:Class ;
+               rdfs:comment "Oferta de empleo público registrado en el sistema." ;
+               rdfs:label "EmpleoPublico" .
+
+
+###  http://example.org/ontologia#EntidadLocales
+:EntidadLocales rdf:type owl:Class ;
+                rdfs:comment "Se ofrece información relacionada con la localización de todos los Ayuntamientos, Mancomunidades, Entidades Inframunicipales, Diputaciones y Núcleos de Población de la Comunidad Valenciana." ;
+                rdfs:label "EntidadLocales" .
+
+
+###  http://example.org/ontologia#EtapaFaseEP
+:EtapaFaseEP rdf:type owl:Class ;
+             rdfs:subClassOf :EmpleoPublico ;
+             rdfs:comment "Etapa y fase del empleo público." ;
+             rdfs:label "EtapaFaseEP" .
+
+
+###  http://example.org/ontologia#FaseFin
+:FaseFin rdf:type owl:Class ;
+         rdfs:subClassOf :TramiteServicio ;
+         rdfs:comment "Fase finalización del trámite." ;
+         rdfs:label "FaseFin" .
+
+
+###  http://example.org/ontologia#FaseInicio
+:FaseInicio rdf:type owl:Class ;
+            rdfs:subClassOf :TramiteServicio ;
+            rdfs:comment "Fase de inicio del trámite." ;
+            rdfs:label "FaseInicio" .
+
+
+###  http://example.org/ontologia#FaseInstruccion
+:FaseInstruccion rdf:type owl:Class ;
+                 rdfs:subClassOf :TramiteServicio ;
+                 rdfs:comment "Fase de instrucción del trámite." ;
+                 rdfs:label "FaseInstruccion" .
+
+
+###  http://example.org/ontologia#Operacion
+:Operacion rdf:type owl:Class ;
+           rdfs:comment "Define las acciones que se pueden realizar sobre los módulos, por ejemplo Personas o Departamentos (Consultar, Insertar, Buscar, Modificar, Eliminar)." ;
+           rdfs:label "Operacion" .
+
+
+###  http://example.org/ontologia#Personas
+:Personas rdf:type owl:Class ;
+          rdfs:subClassOf _:genid11 ;
+          owl:disjointWith _:genid17 ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :perConselleria ;
+                             owl:someValuesFrom xsd:string
+                           ] ;
+          owl:hasKey ( :perCodigo
+                     ) ;
+          rdfs:comment "Guía de personas que trabajan en la administración pública de la Generalitat." ;
+          rdfs:label "Personas" .
+
+_:genid11 rdf:type owl:Class ;
+           owl:unionOf ( [ rdf:type owl:Restriction ;
+                           owl:onProperty :perPerteneceADep ;
+                           owl:allValuesFrom :Departamentos
+                         ]
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :perPerteneceAReg ;
+                           owl:allValuesFrom :Registros
+                         ]
+                       ) .
+
+_:genid17 owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                  owl:onProperty :perPerteneceADep ;
+                                  owl:someValuesFrom :Departamentos
+                                ]
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :perPerteneceAReg ;
+                                  owl:someValuesFrom :Registros
+                                ]
+                              ) ;
+           rdf:type owl:Class .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Personas ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid11 ;
+   rdfs:comment "Una persona pertenece a un departamento o un registro."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Personas ;
+   owl:annotatedProperty owl:disjointWith ;
+   owl:annotatedTarget _:genid17 ;
+   rdfs:comment "Una persona no pertenece a la vez a un departamento y a un registro."
+ ] .
+
+
+###  http://example.org/ontologia#Registros
+:Registros rdf:type owl:Class ;
+           owl:hasKey _:genid25 ;
+           rdfs:comment "Información de los registros en los que los ciudadanos pueden presentar documentación dirigida a la Administración, estos registros pueden ser propios de la Generalitat o concertados con Administraciones locales de la Comunitat." ;
+           rdfs:label "Registros" .
+
+_:genid25 rdf:type rdf:List ;
+           rdf:first :regCodigo ;
+           rdf:rest rdf:nil .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Registros ;
+   owl:annotatedProperty owl:hasKey ;
+   owl:annotatedTarget _:genid25 ;
+   rdfs:comment "Clave primaria registro."
+ ] .
+
+
+###  http://example.org/ontologia#Servicio
+:Servicio rdf:type owl:Class ;
+          rdfs:subClassOf :TramiteServicio ;
+          rdfs:comment "Servicios que el usuario puede gestionar o tramitar." ;
+          rdfs:label "Servicio" .
+
+
+###  http://example.org/ontologia#SubFaseAlegacion
+:SubFaseAlegacion rdf:type owl:Class ;
+                  rdfs:subClassOf :FaseInstruccion ;
+                  rdfs:comment "Subfase de alegación para la fase de instrucción." ;
+                  rdfs:label "SubFaseAlegacion" .
+
+
+###  http://example.org/ontologia#SubFaseJustCobro
+:SubFaseJustCobro rdf:type owl:Class ;
+                  rdfs:subClassOf :FaseFin ;
+                  rdfs:comment "Subfase de justificación y cobro para la fase de finalización." ;
+                  rdfs:label "SubFaseJustCobro" .
+
+
+###  http://example.org/ontologia#TramiteServicio
+:TramiteServicio rdf:type owl:Class ;
+                 rdfs:comment "Trámites y servicios que el usuario puede gestionar o tramitar." ;
+                 rdfs:label "TramiteServicio" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/ontologia#criteriobusqueda_001
+:criteriobusqueda_001 rdf:type owl:NamedIndividual ,
+                               :CriterioBusqueda ;
+                      :crbCampoAsociado "Nombre, Apellidos, Identificación, Correo, Código, Dirección, Provincia, Municipio." ;
+                      :crbCriterio "Criterio de búsqueda guía personas." ;
+                      :crbDescripcion "Búsqueda Personas en la guía de personas dadas de altas en la administración pública." ;
+                      :crbTipoComodin "%" ;
+                      :crbUso """VALOR% (empieza por): Filtra aquellos que elementos donde el campo empieza por VALOR. Este comodín se aplica de forma predeterminada en los cirterios de búsqueda de texto aunque no se indique.
+%VALOR% (contenga): Filtra aquellos elementos cuyo campo contenta VALOR.
+% (cualquier valor): Filtra aquellos elementos que tengan algún valor (no sea nulo) en el campo indicado.""" .
+
+
+###  http://example.org/ontologia#departamento_001
+:departamento_001 rdf:type owl:NamedIndividual ,
+                           :Departamentos ;
+                  :depCP "46018" ;
+                  :depCodigo 101 ;
+                  :depConselleria "Presidencia" ;
+                  :depDireccion "Avd. Del Oeste, 36" ;
+                  :depFechaCrea "01/01/2025" ;
+                  :depNombre "Departamento 001" .
+
+
+###  http://example.org/ontologia#departamento_002
+:departamento_002 rdf:type owl:NamedIndividual ,
+                           :Departamentos ;
+                  :depCodigo 102 ;
+                  :depNombre "Departamento 002" .
+
+
+###  http://example.org/ontologia#operacion_001
+:operacion_001 rdf:type owl:NamedIndividual ,
+                        :Operacion ;
+               :opeDescripcion "Modificación de los datos seleccionados." ;
+               :opeNombre "Editar" .
+
+
+###  http://example.org/ontologia#operacion_002
+:operacion_002 rdf:type owl:NamedIndividual ,
+                        :Operacion ;
+               :opeDescripcion "Buscar los datos de acuerdo con los campos indicados en el criterio de búsqueda." ;
+               :opeNombre "Buscar" .
+
+
+###  http://example.org/ontologia#persona_001
+:persona_001 rdf:type owl:NamedIndividual ,
+                      :Personas ;
+             :perPerteneceADep :departamento_001 ;
+             :perAdscrito "Sí" ;
+             :perApellido1 "Pérez" ;
+             :perApellido2 "Gómez" ;
+             :perCodDep 101 ;
+             :perCodigo 101 ;
+             :perGenero "Masculino" ;
+             :perIdentificacion "12345678X" ;
+             :perNacionalidad "Española" ;
+             :perNombre "Juan" ;
+             :perVisibilidad "Pública" .
+
+
+###  http://example.org/ontologia#persona_002
+:persona_002 rdf:type owl:NamedIndividual ,
+                      :Personas ;
+             :perPerteneceADep :departamento_002 ;
+             :perAdscrito "Sí" ;
+             :perApellido1 "López" ;
+             :perApellido2 "Fernández" ;
+             :perCodDep 102 ;
+             :perCodigo 102 ;
+             :perGenero "Femenino" ;
+             :perIdentificacion "87654321Y" ;
+             :perNacionalidad "Española" ;
+             :perNombre "María" ;
+             :perVisibilidad "Oculta" .
+
+
+###  http://example.org/ontologia#persona_003
+:persona_003 rdf:type owl:NamedIndividual ,
+                      :Personas ;
+             :perPerteneceAReg :persona_003 ;
+             :perAdscrito "Sí" ;
+             :perApellido1 "Martínez" ;
+             :perApellido2 "Ruiz" ;
+             :perCodDep 102 ;
+             :perCodigo 103 ;
+             :perGenero "Masculino" ;
+             :perIdentificacion "45678912Z" ;
+             :perNacionalidad "Española" ;
+             :perNombre "Carlos" ;
+             :perVisibilidad "Pública" .
+
+
+###  http://example.org/ontologia#persona_004
+:persona_004 rdf:type owl:NamedIndividual ,
+                      :Personas ;
+             :perPerteneceADep :departamento_001 ;
+             :perAdscrito "No" ;
+             :perApellido1 "González" ;
+             :perApellido2 "Díaz" ;
+             :perCodDep 101 ;
+             :perCodigo 104 ;
+             :perGenero "Femenino" ;
+             :perIdentificacion "74125896W" ;
+             :perNacionalidad "Española" ;
+             :perNombre "Laura" ;
+             :perVisibilidad "Pública" .
+
+
+###  http://example.org/ontologia#persona_005
+:persona_005 rdf:type owl:NamedIndividual ,
+                      :Personas ;
+             :perPerteneceADep :departamento_001 ;
+             :perAdscrito "No" ;
+             :perApellido1 "Sánchez" ;
+             :perApellido2 "Ortega" ;
+             :perCodDep 101 ;
+             :perCodigo 105 ;
+             :perGenero "Masculino" ;
+             :perIdentificacion "36985214V" ;
+             :perNacionalidad "Española" ;
+             :perNombre "David" ;
+             :perVisibilidad "Oculta" .
+
+
+###  http://example.org/ontologia#persona_006
+:persona_006 rdf:type owl:NamedIndividual ,
+                      :Personas ;
+             :perCodigo 101 .
+
+
+###  http://example.org/ontologia#registro_001
+:registro_001 rdf:type owl:NamedIndividual ;
+              :perPerteneceAReg :persona_001 ;
+              :perNombre "REGISTRO DE LA DELEGACIÓN DE LA AGENCIA TRIBUTARIA VALENCIANA - ALICANTE (ATV)" ;
+              :regCodigo 001 .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

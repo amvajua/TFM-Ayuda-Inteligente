@@ -1,0 +1,4785 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/ontologia"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/ontologia">
+    <Prefix name="" IRI="http://example.org/ontologia#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AyudaCampo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CriterioBusqueda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Departamentos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmpleoPublico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EntidadLocales"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EtapaFaseEP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FaseFin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FaseInicio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FaseInstruccion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Operacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Registros"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Servicio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubFaseAlegacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubFaseJustCobro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TramiteServicio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ayudaAsociadoDepartamento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ayudaAsociadoEELL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ayudaAsociadoEP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ayudaAsociadoPersona"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ayudaAsociadoRegistro"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ayudaAsociadoTramite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#criterioASociadoEELL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#criterioAsociadoDepartamento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#criterioAsociadoEP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#criterioAsociadoPersona"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#criterioAsociadoRegistro"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#criterioAsociadoTramite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#epPerteneceADep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opeAsociadoDepartamento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opeAsociadoEELL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opeAsociadoEP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opeAsociadoPersona"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opeAsociadoRegistro"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opeAsociadoTramite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#perPerteneceADep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#perPerteneceAReg"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#regPerteneceADep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trsPerteneceADep"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ayuCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ayuEjemplo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ayuModulo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ayuNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ayuObliga"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ayuReglas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crbCampoAsociado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crbCriterio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crbDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crbTipoComodin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crbUso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depCP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depConselleria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depCorreo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depDireccion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depFaxExt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depFaxInt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depFechaCrea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depHorario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depMunicipio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depProvincia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depRango"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depReglaCrea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depTelefonExt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depTelefonInt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#depTipoCentro"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlCP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlComarca"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlCorreo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlDireccion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlFax"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlMunicipio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlProvincia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlTelefono"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlTipo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#enlWeb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuConvocatoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuDepart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuDescripPlaza"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuEnlace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuEstadoPlazo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuFechaCrea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuFormaPago"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuGrupo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuInfoPresent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuNumPlaza"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuPrueba"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuReduccTasa"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuRequisito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuTasa"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuTipoPersonal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuTitulEspec"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epuTitulacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueAbrePlazo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueActual"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueCierrePlazo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueDocEntrega"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueEnlce"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueFase"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueFechaPubli"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueInfoComple"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueInfoPresent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueMedioPubli"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#epueNumPubli"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinCuantia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinDeptResol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinEnlace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinPlazoMax"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinProcCobro"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinRecurso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ffinSancion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiEnlace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiFechaFin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiFechaIni"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiForPresent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiInteresados"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiNorma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiObjeto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiPlazoPresent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiRequisitos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finiTasaPago"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finsCriteriosValora"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finsDeptTramita"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finsEnlace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finsInfo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finsNorma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#opeDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#opeNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perAdscrito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perAltogCargo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perApellido1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perApellido2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perCargo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perCodDep"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perConselleria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perDespacho"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perDireccion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perFaxExterno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perFaxInterno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perFuncion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perGenero"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perIdentificacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perMunicipio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perNacionalidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perPlanta"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perProvincia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perTelefonExt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perTelefonInt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perTipoPersonal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perUnidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perVisibilidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regCP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regCodDep"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regConselleria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regCorreo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regDireccion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regFaxExt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regFaxInt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regHorario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regMunicipio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regNombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regProvincia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regTelefonExt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regTelefonInt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#regTipo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servEnlace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servFechaFin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servFechaIni"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servInfoComple"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servInteresados"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servNorma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servObjeto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servPlazo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#servRequisitos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sffjcEnlace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sffjcFechaFin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sffjcFechaIni"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sffjcForPresent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sffjcNorma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sffjcObjeto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sffjcPlazo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinsaEnlace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinsaFechaFin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinsaFechaIni"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinsaForPresent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinsaNorma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinsaObjeto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinsaPlazo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trsCodigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trsDepart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trsDescripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trsDestino"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trsObjetivo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trsTipo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#criteriobusqueda_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#departamento_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#departamento_002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#operacion_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#operacion_002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#persona_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#persona_002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#persona_003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#persona_004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#persona_005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#persona_006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#registro_001"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#string"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#EtapaFaseEP"/>
+        <Class IRI="#EmpleoPublico"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FaseFin"/>
+        <Class IRI="#TramiteServicio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FaseInicio"/>
+        <Class IRI="#TramiteServicio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FaseInstruccion"/>
+        <Class IRI="#TramiteServicio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Una persona pertenece a un departamento o un registro.</Literal>
+        </Annotation>
+        <Class IRI="#Personas"/>
+        <ObjectUnionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#perPerteneceADep"/>
+                <Class IRI="#Departamentos"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#perPerteneceAReg"/>
+                <Class IRI="#Registros"/>
+            </ObjectAllValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Servicio"/>
+        <Class IRI="#TramiteServicio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubFaseAlegacion"/>
+        <Class IRI="#FaseInstruccion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubFaseJustCobro"/>
+        <Class IRI="#FaseFin"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Una persona no pertenece a la vez a un departamento y a un registro.</Literal>
+        </Annotation>
+        <Class IRI="#Personas"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#perPerteneceADep"/>
+                <Class IRI="#Departamentos"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#perPerteneceAReg"/>
+                <Class IRI="#Registros"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Personas"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#perConselleria"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#CriterioBusqueda"/>
+        <NamedIndividual IRI="#criteriobusqueda_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Departamentos"/>
+        <NamedIndividual IRI="#departamento_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Departamentos"/>
+        <NamedIndividual IRI="#departamento_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operacion"/>
+        <NamedIndividual IRI="#operacion_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operacion"/>
+        <NamedIndividual IRI="#operacion_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personas"/>
+        <NamedIndividual IRI="#persona_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personas"/>
+        <NamedIndividual IRI="#persona_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personas"/>
+        <NamedIndividual IRI="#persona_003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personas"/>
+        <NamedIndividual IRI="#persona_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personas"/>
+        <NamedIndividual IRI="#persona_005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personas"/>
+        <NamedIndividual IRI="#persona_006"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perPerteneceADep"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <NamedIndividual IRI="#departamento_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perPerteneceADep"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <NamedIndividual IRI="#departamento_002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perPerteneceAReg"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <NamedIndividual IRI="#persona_003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perPerteneceADep"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <NamedIndividual IRI="#departamento_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perPerteneceADep"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <NamedIndividual IRI="#departamento_001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perPerteneceAReg"/>
+        <NamedIndividual IRI="#registro_001"/>
+        <NamedIndividual IRI="#persona_001"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crbCampoAsociado"/>
+        <NamedIndividual IRI="#criteriobusqueda_001"/>
+        <Literal>Nombre, Apellidos, Identificación, Correo, Código, Dirección, Provincia, Municipio.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crbCriterio"/>
+        <NamedIndividual IRI="#criteriobusqueda_001"/>
+        <Literal>Criterio de búsqueda guía personas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crbDescripcion"/>
+        <NamedIndividual IRI="#criteriobusqueda_001"/>
+        <Literal>Búsqueda Personas en la guía de personas dadas de altas en la administración pública.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crbTipoComodin"/>
+        <NamedIndividual IRI="#criteriobusqueda_001"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crbUso"/>
+        <NamedIndividual IRI="#criteriobusqueda_001"/>
+        <Literal>VALOR% (empieza por): Filtra aquellos que elementos donde el campo empieza por VALOR. Este comodín se aplica de forma predeterminada en los cirterios de búsqueda de texto aunque no se indique.
+%VALOR% (contenga): Filtra aquellos elementos cuyo campo contenta VALOR.
+% (cualquier valor): Filtra aquellos elementos que tengan algún valor (no sea nulo) en el campo indicado.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depCP"/>
+        <NamedIndividual IRI="#departamento_001"/>
+        <Literal>46018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depCodigo"/>
+        <NamedIndividual IRI="#departamento_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depConselleria"/>
+        <NamedIndividual IRI="#departamento_001"/>
+        <Literal>Presidencia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depDireccion"/>
+        <NamedIndividual IRI="#departamento_001"/>
+        <Literal>Avd. Del Oeste, 36</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depFechaCrea"/>
+        <NamedIndividual IRI="#departamento_001"/>
+        <Literal>01/01/2025</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depNombre"/>
+        <NamedIndividual IRI="#departamento_001"/>
+        <Literal>Departamento 001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depCodigo"/>
+        <NamedIndividual IRI="#departamento_002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">102</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#depNombre"/>
+        <NamedIndividual IRI="#departamento_002"/>
+        <Literal>Departamento 002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#opeDescripcion"/>
+        <NamedIndividual IRI="#operacion_001"/>
+        <Literal>Modificación de los datos seleccionados.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#opeNombre"/>
+        <NamedIndividual IRI="#operacion_001"/>
+        <Literal>Editar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#opeDescripcion"/>
+        <NamedIndividual IRI="#operacion_002"/>
+        <Literal>Buscar los datos de acuerdo con los campos indicados en el criterio de búsqueda.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#opeNombre"/>
+        <NamedIndividual IRI="#operacion_002"/>
+        <Literal>Buscar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perAdscrito"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>Sí</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido1"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>Pérez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido2"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>Gómez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodDep"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodigo"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perGenero"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>Masculino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perIdentificacion"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>12345678X</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNacionalidad"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>Española</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNombre"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>Juan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perVisibilidad"/>
+        <NamedIndividual IRI="#persona_001"/>
+        <Literal>Pública</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perAdscrito"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>Sí</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido1"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>López</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido2"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>Fernández</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodDep"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">102</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodigo"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">102</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perGenero"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>Femenino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perIdentificacion"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>87654321Y</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNacionalidad"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>Española</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNombre"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>María</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perVisibilidad"/>
+        <NamedIndividual IRI="#persona_002"/>
+        <Literal>Oculta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perAdscrito"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>Sí</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido1"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>Martínez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido2"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>Ruiz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodDep"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">102</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodigo"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">103</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perGenero"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>Masculino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perIdentificacion"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>45678912Z</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNacionalidad"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>Española</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNombre"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>Carlos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perVisibilidad"/>
+        <NamedIndividual IRI="#persona_003"/>
+        <Literal>Pública</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perAdscrito"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>No</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido1"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>González</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido2"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>Díaz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodDep"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodigo"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">104</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perGenero"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>Femenino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perIdentificacion"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>74125896W</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNacionalidad"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>Española</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNombre"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>Laura</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perVisibilidad"/>
+        <NamedIndividual IRI="#persona_004"/>
+        <Literal>Pública</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perAdscrito"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>No</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido1"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>Sánchez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perApellido2"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>Ortega</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodDep"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodigo"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perGenero"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>Masculino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perIdentificacion"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>36985214V</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNacionalidad"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>Española</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNombre"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>David</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perVisibilidad"/>
+        <NamedIndividual IRI="#persona_005"/>
+        <Literal>Oculta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perCodigo"/>
+        <NamedIndividual IRI="#persona_006"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#perNombre"/>
+        <NamedIndividual IRI="#registro_001"/>
+        <Literal>REGISTRO DE LA DELEGACIÓN DE LA AGENCIA TRIBUTARIA VALENCIANA - ALICANTE (ATV)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#regCodigo"/>
+        <NamedIndividual IRI="#registro_001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">001</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ayudaAsociadoDepartamento"/>
+        <Class IRI="#Departamentos"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ayudaAsociadoEELL"/>
+        <Class IRI="#EntidadLocales"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ayudaAsociadoEP"/>
+        <Class IRI="#EmpleoPublico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ayudaAsociadoPersona"/>
+        <Class IRI="#Personas"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ayudaAsociadoRegistro"/>
+        <Class IRI="#Registros"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ayudaAsociadoTramite"/>
+        <Class IRI="#Personas"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#criterioASociadoEELL"/>
+        <Class IRI="#EntidadLocales"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#criterioAsociadoDepartamento"/>
+        <Class IRI="#Departamentos"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#criterioAsociadoEP"/>
+        <Class IRI="#EmpleoPublico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#criterioAsociadoPersona"/>
+        <Class IRI="#Personas"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#criterioAsociadoRegistro"/>
+        <Class IRI="#Registros"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#criterioAsociadoTramite"/>
+        <Class IRI="#TramiteServicio"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>El empleo público tiene asignado un departamento, órgano o unidad del que pertenece.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#epPerteneceADep"/>
+        <Class IRI="#EmpleoPublico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opeAsociadoDepartamento"/>
+        <Class IRI="#Departamentos"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opeAsociadoEELL"/>
+        <Class IRI="#EntidadLocales"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opeAsociadoEP"/>
+        <Class IRI="#EmpleoPublico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opeAsociadoPersona"/>
+        <Class IRI="#Personas"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opeAsociadoRegistro"/>
+        <Class IRI="#Registros"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opeAsociadoTramite"/>
+        <Class IRI="#TramiteServicio"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Toda persona pertenece a un departamento sino pertenece a un registro.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#perPerteneceADep"/>
+        <Class IRI="#Personas"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Toda persona pertenece a un registro sino pertenece a un departamento.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#perPerteneceAReg"/>
+        <Class IRI="#Personas"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Un registro pertenece a un departamento.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#regPerteneceADep"/>
+        <Class IRI="#Registros"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Los trámites y servicios pertenecen a un departamento.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#trsPerteneceADep"/>
+        <Class IRI="#TramiteServicio"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ayudaAsociadoDepartamento"/>
+        <Class IRI="#AyudaCampo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ayudaAsociadoEELL"/>
+        <Class IRI="#AyudaCampo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ayudaAsociadoEP"/>
+        <Class IRI="#AyudaCampo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ayudaAsociadoPersona"/>
+        <Class IRI="#AyudaCampo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ayudaAsociadoRegistro"/>
+        <Class IRI="#AyudaCampo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ayudaAsociadoTramite"/>
+        <Class IRI="#AyudaCampo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#criterioASociadoEELL"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#criterioAsociadoDepartamento"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#criterioAsociadoEP"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#criterioAsociadoPersona"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#criterioAsociadoRegistro"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#criterioAsociadoTramite"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Departamentos de la administración pública de la GVA que ofertan empleo público.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#epPerteneceADep"/>
+        <Class IRI="#Departamentos"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opeAsociadoDepartamento"/>
+        <Class IRI="#Operacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opeAsociadoEELL"/>
+        <Class IRI="#Operacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opeAsociadoEP"/>
+        <Class IRI="#Operacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opeAsociadoPersona"/>
+        <Class IRI="#Operacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opeAsociadoRegistro"/>
+        <Class IRI="#Operacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opeAsociadoTramite"/>
+        <Class IRI="#Operacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#perPerteneceADep"/>
+        <Class IRI="#Departamentos"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#perPerteneceAReg"/>
+        <Class IRI="#Registros"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Los departamentos tienen asignados registros.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#regPerteneceADep"/>
+        <Class IRI="#Departamentos"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Los departamentos tienen asignados trámites y servicios.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#trsPerteneceADep"/>
+        <Class IRI="#Departamentos"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ayuCodigo"/>
+        <Class IRI="#AyudaCampo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ayuEjemplo"/>
+        <Class IRI="#AyudaCampo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ayuModulo"/>
+        <Class IRI="#AyudaCampo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ayuNombre"/>
+        <Class IRI="#AyudaCampo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ayuObliga"/>
+        <Class IRI="#AyudaCampo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ayuReglas"/>
+        <Class IRI="#AyudaCampo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crbCampoAsociado"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crbCriterio"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crbDescripcion"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crbTipoComodin"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crbUso"/>
+        <Class IRI="#CriterioBusqueda"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depCP"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depCodigo"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depConselleria"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depCorreo"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depDireccion"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depFaxExt"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depFaxInt"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depFechaCrea"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depHorario"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depMunicipio"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depNombre"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depProvincia"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depRango"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depReglaCrea"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depTelefonExt"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depTelefonInt"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#depTipoCentro"/>
+        <Class IRI="#Departamentos"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlCP"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlCodigo"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlComarca"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlCorreo"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlDescripcion"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlDireccion"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlFax"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlMunicipio"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlProvincia"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlTelefono"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlTipo"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#enlWeb"/>
+        <Class IRI="#EntidadLocales"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuCodigo"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuConvocatoria"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuDepart"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuDescripPlaza"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuDescripcion"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuEnlace"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuEstadoPlazo"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuFechaCrea"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuFormaPago"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuGrupo"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuInfoPresent"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuNumPlaza"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuPrueba"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuReduccTasa"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuRequisito"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuTasa"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuTipoPersonal"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuTitulEspec"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epuTitulacion"/>
+        <Class IRI="#EmpleoPublico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueAbrePlazo"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueActual"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueCierrePlazo"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueCodigo"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueDocEntrega"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueEnlce"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueFase"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueFechaPubli"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueInfoComple"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueInfoPresent"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueMedioPubli"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueNombre"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#epueNumPubli"/>
+        <Class IRI="#EtapaFaseEP"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinCuantia"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinDeptResol"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinDescripcion"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinEnlace"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinPlazoMax"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinProcCobro"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinRecurso"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ffinSancion"/>
+        <Class IRI="#FaseFin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiEnlace"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiFechaFin"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiFechaIni"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiForPresent"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiInteresados"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiNorma"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiObjeto"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiPlazoPresent"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiRequisitos"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finiTasaPago"/>
+        <Class IRI="#FaseInicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finsCriteriosValora"/>
+        <Class IRI="#FaseInstruccion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finsDeptTramita"/>
+        <Class IRI="#FaseInstruccion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finsEnlace"/>
+        <Class IRI="#FaseInstruccion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finsInfo"/>
+        <Class IRI="#FaseInstruccion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#finsNorma"/>
+        <Class IRI="#FaseInstruccion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#opeDescripcion"/>
+        <Class IRI="#Operacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#opeNombre"/>
+        <Class IRI="#Operacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perAdscrito"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perAltogCargo"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perApellido1"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perApellido2"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perCargo"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perCodDep"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perCodigo"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perConselleria"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perDespacho"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perDireccion"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perFaxExterno"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perFaxInterno"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perFuncion"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perGenero"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perIdentificacion"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perMunicipio"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perNacionalidad"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perNombre"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perPlanta"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perProvincia"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perTelefonExt"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perTelefonInt"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perTipoPersonal"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perUnidad"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perVisibilidad"/>
+        <Class IRI="#Personas"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regCP"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regCodDep"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regCodigo"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regConselleria"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regCorreo"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regDireccion"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regFaxExt"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regFaxInt"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regHorario"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regMunicipio"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regNombre"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regProvincia"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regTelefonExt"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regTelefonInt"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#regTipo"/>
+        <Class IRI="#Registros"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servEnlace"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servFechaFin"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servFechaIni"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servInfoComple"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servInteresados"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servNorma"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servObjeto"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servPlazo"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#servRequisitos"/>
+        <Class IRI="#Servicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sffjcEnlace"/>
+        <Class IRI="#SubFaseJustCobro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sffjcFechaFin"/>
+        <Class IRI="#SubFaseJustCobro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sffjcFechaIni"/>
+        <Class IRI="#SubFaseJustCobro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sffjcForPresent"/>
+        <Class IRI="#SubFaseJustCobro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sffjcNorma"/>
+        <Class IRI="#SubFaseJustCobro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sffjcObjeto"/>
+        <Class IRI="#SubFaseJustCobro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sffjcPlazo"/>
+        <Class IRI="#SubFaseJustCobro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinsaEnlace"/>
+        <Class IRI="#SubFaseAlegacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinsaFechaFin"/>
+        <Class IRI="#SubFaseAlegacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinsaFechaIni"/>
+        <Class IRI="#SubFaseAlegacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinsaForPresent"/>
+        <Class IRI="#SubFaseAlegacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinsaNorma"/>
+        <Class IRI="#SubFaseAlegacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinsaObjeto"/>
+        <Class IRI="#SubFaseAlegacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinsaPlazo"/>
+        <Class IRI="#SubFaseAlegacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trsCodigo"/>
+        <Class IRI="#TramiteServicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trsDepart"/>
+        <Class IRI="#TramiteServicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trsDescripcion"/>
+        <Class IRI="#TramiteServicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trsDestino"/>
+        <Class IRI="#TramiteServicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trsObjetivo"/>
+        <Class IRI="#TramiteServicio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trsTipo"/>
+        <Class IRI="#TramiteServicio"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#ayuCodigo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ayuEjemplo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ayuModulo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ayuNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ayuObliga"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ayuReglas"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crbCampoAsociado"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crbCriterio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crbDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crbTipoComodin"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crbUso"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depCP"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depCodigo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depConselleria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depCorreo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depDireccion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depFaxExt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depFaxInt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depFechaCrea"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depHorario"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depMunicipio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depProvincia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depRango"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depReglaCrea"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depTelefonExt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depTelefonInt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#depTipoCentro"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlCP"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlCodigo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlComarca"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlCorreo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlDireccion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlFax"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlMunicipio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlProvincia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlTelefono"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlTipo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#enlWeb"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuCodigo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuConvocatoria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuDepart"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuDescripPlaza"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuEnlace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuEstadoPlazo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuFechaCrea"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuFormaPago"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuGrupo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuInfoPresent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuNumPlaza"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuPrueba"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuReduccTasa"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuRequisito"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuTasa"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuTipoPersonal"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuTitulEspec"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epuTitulacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueAbrePlazo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueActual"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueCierrePlazo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueCodigo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueDocEntrega"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueEnlce"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueFase"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueFechaPubli"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueInfoComple"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueInfoPresent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueMedioPubli"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#epueNumPubli"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinCuantia"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinDeptResol"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinEnlace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinPlazoMax"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinProcCobro"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinRecurso"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ffinSancion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiEnlace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiFechaFin"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiFechaIni"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiForPresent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiInteresados"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiNorma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiObjeto"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiPlazoPresent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiRequisitos"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finiTasaPago"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finsCriteriosValora"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finsDeptTramita"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finsEnlace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finsInfo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finsNorma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#opeDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#opeNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perAdscrito"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perAltogCargo"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perApellido1"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perApellido2"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perCargo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perCodDep"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perCodigo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perConselleria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perDespacho"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perDireccion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perFaxExterno"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perFaxInterno"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perFuncion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perGenero"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perIdentificacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perMunicipio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perNacionalidad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perPlanta"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perProvincia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perTelefonExt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perTelefonInt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perTipoPersonal"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perUnidad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perVisibilidad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regCP"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regCodDep"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regCodigo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regConselleria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regCorreo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regDireccion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regFaxExt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regFaxInt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regHorario"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regMunicipio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regNombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regProvincia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regTelefonExt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regTelefonInt"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#regTipo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servEnlace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servFechaFin"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servFechaIni"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servInfoComple"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servInteresados"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servNorma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servObjeto"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servPlazo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#servRequisitos"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sffjcEnlace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sffjcFechaFin"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sffjcFechaIni"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sffjcForPresent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sffjcNorma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sffjcObjeto"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sffjcPlazo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinsaEnlace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinsaFechaFin"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinsaFechaIni"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinsaForPresent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinsaNorma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinsaObjeto"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinsaPlazo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trsCodigo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trsDepart"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trsDescripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trsDestino"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trsObjetivo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trsTipo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <HasKey>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Clave primaria departamento.</Literal>
+        </Annotation>
+        <Class IRI="#Departamentos"/>
+        <DataProperty IRI="#depCodigo"/>
+    </HasKey>
+    <HasKey>
+        <Class IRI="#Personas"/>
+        <DataProperty IRI="#perCodigo"/>
+    </HasKey>
+    <HasKey>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Clave primaria registro.</Literal>
+        </Annotation>
+        <Class IRI="#Registros"/>
+        <DataProperty IRI="#regCodigo"/>
+    </HasKey>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AyudaCampo</IRI>
+        <Literal>Ayuda campo para cada uno de lso módulos del sistema.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AyudaCampo</IRI>
+        <Literal>AyudaCampo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CriterioBusqueda</IRI>
+        <Literal>Representa un criterio específico utilizado para buscar información sobre las entidades como pueden ser Personas, Departamentos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CriterioBusqueda</IRI>
+        <Literal>CriterioBusqueda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Departamentos</IRI>
+        <Literal>Departamentos de la administración pública de la Generalitat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Departamentos</IRI>
+        <Literal>Departamentos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EmpleoPublico</IRI>
+        <Literal>Oferta de empleo público registrado en el sistema.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EmpleoPublico</IRI>
+        <Literal>EmpleoPublico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EntidadLocales</IRI>
+        <Literal>Se ofrece información relacionada con la localización de todos los Ayuntamientos, Mancomunidades, Entidades Inframunicipales, Diputaciones y Núcleos de Población de la Comunidad Valenciana.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EntidadLocales</IRI>
+        <Literal>EntidadLocales</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EtapaFaseEP</IRI>
+        <Literal>Etapa y fase del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EtapaFaseEP</IRI>
+        <Literal>EtapaFaseEP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FaseFin</IRI>
+        <Literal>Fase finalización del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FaseFin</IRI>
+        <Literal>FaseFin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FaseInicio</IRI>
+        <Literal>Fase de inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FaseInicio</IRI>
+        <Literal>FaseInicio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FaseInstruccion</IRI>
+        <Literal>Fase de instrucción del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FaseInstruccion</IRI>
+        <Literal>FaseInstruccion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Operacion</IRI>
+        <Literal>Define las acciones que se pueden realizar sobre los módulos, por ejemplo Personas o Departamentos (Consultar, Insertar, Buscar, Modificar, Eliminar).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Operacion</IRI>
+        <Literal>Operacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Personas</IRI>
+        <Literal>Guía de personas que trabajan en la administración pública de la Generalitat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Personas</IRI>
+        <Literal>Personas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Registros</IRI>
+        <Literal>Información de los registros en los que los ciudadanos pueden presentar documentación dirigida a la Administración, estos registros pueden ser propios de la Generalitat o concertados con Administraciones locales de la Comunitat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Registros</IRI>
+        <Literal>Registros</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Servicio</IRI>
+        <Literal>Servicios que el usuario puede gestionar o tramitar.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Servicio</IRI>
+        <Literal>Servicio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SubFaseAlegacion</IRI>
+        <Literal>Subfase de alegación para la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SubFaseAlegacion</IRI>
+        <Literal>SubFaseAlegacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SubFaseJustCobro</IRI>
+        <Literal>Subfase de justificación y cobro para la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SubFaseJustCobro</IRI>
+        <Literal>SubFaseJustCobro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TramiteServicio</IRI>
+        <Literal>Trámites y servicios que el usuario puede gestionar o tramitar.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TramiteServicio</IRI>
+        <Literal>TramiteServicio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayuCodigo</IRI>
+        <Literal>Identificador técnico del campo (ej. PER_NOMBRE).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayuCodigo</IRI>
+        <Literal>ayuCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayuEjemplo</IRI>
+        <Literal>Ejemplo de uso práctico para el campo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayuEjemplo</IRI>
+        <Literal>ayuEjemplo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayuModulo</IRI>
+        <Literal>Módulo de la aplicación al que pertenece este campo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayuModulo</IRI>
+        <Literal>ayuModulo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayuNombre</IRI>
+        <Literal>Nombre descriptivo del campo (ej. Nombre completo).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayuNombre</IRI>
+        <Literal>ayuNombre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayuObliga</IRI>
+        <Literal>Indica si el campo es obligatorio (Sí/No).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayuObliga</IRI>
+        <Literal>ayuObliga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayuReglas</IRI>
+        <Literal>Reglas de validación del campo si las hay.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayuReglas</IRI>
+        <Literal>ayuReglas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayudaAsociadoDepartamento</IRI>
+        <Literal>Ayuda asociada al departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayudaAsociadoDepartamento</IRI>
+        <Literal>ayudaAsociadoDepartamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayudaAsociadoEELL</IRI>
+        <Literal>Ayuda asociada a entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayudaAsociadoEELL</IRI>
+        <Literal>ayudaAsociadoEELL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayudaAsociadoEP</IRI>
+        <Literal>Ayuda asociada al módulo de empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayudaAsociadoEP</IRI>
+        <Literal>ayudaAsociadoEP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayudaAsociadoPersona</IRI>
+        <Literal>Ayuda asociado al módulo persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayudaAsociadoPersona</IRI>
+        <Literal>ayudaAsociadoPersona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayudaAsociadoRegistro</IRI>
+        <Literal>Ayuda asociado al módulo registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayudaAsociadoRegistro</IRI>
+        <Literal>ayudaAsociadoRegistro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ayudaAsociadoTramite</IRI>
+        <Literal>Ayuda asociado al módulo trámite y servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ayudaAsociadoTramite</IRI>
+        <Literal>ayudaAsociadoTramite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crbCampoAsociado</IRI>
+        <Literal>Indica al campo al que se refiere el criterio de búsqueda.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#crbCampoAsociado</IRI>
+        <Literal>crbCampoAsociado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crbCriterio</IRI>
+        <Literal>Nombre del criterio de búsqueda. Ejemplo &quot;Apellidos&quot;, &quot;Nombre&quot;, &quot;Departamento&quot; etc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#crbCriterio</IRI>
+        <Literal>crbCriterio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crbDescripcion</IRI>
+        <Literal>Descripción del criterio de búsqueda.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#crbDescripcion</IRI>
+        <Literal>crbDescripcion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crbTipoComodin</IRI>
+        <Literal>Tipo de comodines permitidos al realizar una búsqueda (%,?)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#crbTipoComodin</IRI>
+        <Literal>crbTipoComodin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crbUso</IRI>
+        <Literal>Uso del comodín que se puede utilizar en una búsqueda.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#crbUso</IRI>
+        <Literal>crbUso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#criterioASociadoEELL</IRI>
+        <Literal>Criterio de búsqueda asociado al módulo entidades locales.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#criterioASociadoEELL</IRI>
+        <Literal>criterioAsociadoEELL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#criterioAsociadoDepartamento</IRI>
+        <Literal>Criterio de búsqueda asociado al módulo departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#criterioAsociadoDepartamento</IRI>
+        <Literal>criterioAsociadoDepartamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#criterioAsociadoEP</IRI>
+        <Literal>Criterio de búsqueda asociado al módulo empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#criterioAsociadoEP</IRI>
+        <Literal>criterioAsociadoEP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#criterioAsociadoPersona</IRI>
+        <Literal>Criterio de búsqueda asociado al módulo persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#criterioAsociadoPersona</IRI>
+        <Literal>criterioAsociadoPersona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#criterioAsociadoRegistro</IRI>
+        <Literal>Criterio de búsqueda asociado al módulo registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#criterioAsociadoRegistro</IRI>
+        <Literal>criterioAsociadoRegistro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#criterioAsociadoTramite</IRI>
+        <Literal>Criterio de búsqueda asociado al módulo trámite y servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#criterioAsociadoTramite</IRI>
+        <Literal>criterioAsociadoTramite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depCP</IRI>
+        <Literal>Código postal departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depCP</IRI>
+        <Literal>depCP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depCodigo</IRI>
+        <Literal>Código identificador del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depCodigo</IRI>
+        <Literal>depCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depConselleria</IRI>
+        <Literal>Conselleria a la que pertenece el departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depConselleria</IRI>
+        <Literal>depConselleria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depCorreo</IRI>
+        <Literal>Correo organizativo del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depCorreo</IRI>
+        <Literal>depCorreo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depDireccion</IRI>
+        <Literal>Dirección del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depDireccion</IRI>
+        <Literal>depDireccion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depFaxExt</IRI>
+        <Literal>Fax externo del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depFaxExt</IRI>
+        <Literal>depFaxExt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depFaxInt</IRI>
+        <Literal>Fax interno del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depFaxInt</IRI>
+        <Literal>depFaxInt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depFechaCrea</IRI>
+        <Literal>Fecha creación del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depFechaCrea</IRI>
+        <Literal>depFechaCrea</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depHorario</IRI>
+        <Literal>Horario departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depHorario</IRI>
+        <Literal>depHorario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depMunicipio</IRI>
+        <Literal>Municipio departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depMunicipio</IRI>
+        <Literal>depMunicipio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depNombre</IRI>
+        <Literal>Nombre formal del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depNombre</IRI>
+        <Literal>depNombre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depProvincia</IRI>
+        <Literal>Provincia del departamento donde está ubicado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depProvincia</IRI>
+        <Literal>depProvincia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depRango</IRI>
+        <Literal>Rango al que pertenece el departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depRango</IRI>
+        <Literal>depRango</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depReglaCrea</IRI>
+        <Literal>Normativa bajo la cual fue creado el departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depReglaCrea</IRI>
+        <Literal>depReglaCrea</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depTelefonExt</IRI>
+        <Literal>Teléfono de contacto externo del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depTelefonExt</IRI>
+        <Literal>depTelefonExt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depTelefonInt</IRI>
+        <Literal>Extensión teléfono contacto interna del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depTelefonInt</IRI>
+        <Literal>depTelefonInt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depTipoCentro</IRI>
+        <Literal>Tipo centro del departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#depTipoCentro</IRI>
+        <Literal>depTipoCentro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlCP</IRI>
+        <Literal>Código Postal de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlCP</IRI>
+        <Literal>enlCP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlCodigo</IRI>
+        <Literal>Código de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlCodigo</IRI>
+        <Literal>enlCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlComarca</IRI>
+        <Literal>Comarca de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlComarca</IRI>
+        <Literal>enlComarca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlCorreo</IRI>
+        <Literal>Correo de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlCorreo</IRI>
+        <Literal>enlCorreo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlDescripcion</IRI>
+        <Literal>Descripcion de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlDescripcion</IRI>
+        <Literal>enlDescripcion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlDireccion</IRI>
+        <Literal>Dirección de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlDireccion</IRI>
+        <Literal>enlDireccion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlFax</IRI>
+        <Literal>Fax de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlFax</IRI>
+        <Literal>enlFax</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlMunicipio</IRI>
+        <Literal>Municipio de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlMunicipio</IRI>
+        <Literal>enlMunicipio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlProvincia</IRI>
+        <Literal>Provincia de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlProvincia</IRI>
+        <Literal>enlProvincia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlTelefono</IRI>
+        <Literal>Teléfono de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlTelefono</IRI>
+        <Literal>enlTelefono</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlTipo</IRI>
+        <Literal>Tipo de entidad local: ayuntamiento, mancomunidad, diputación etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlTipo</IRI>
+        <Literal>enlTipo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enlWeb</IRI>
+        <Literal>Web de la entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#enlWeb</IRI>
+        <Literal>enlWeb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epPerteneceADep</IRI>
+        <Literal>Define la relación entre un Departamento y el empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epPerteneceADep</IRI>
+        <Literal>epPerteneceADep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuCodigo</IRI>
+        <Literal>Código del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuCodigo</IRI>
+        <Literal>epuCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuConvocatoria</IRI>
+        <Literal>Convocatoria del empleo público ofertado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuConvocatoria</IRI>
+        <Literal>epuConvocatoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuDepart</IRI>
+        <Literal>Departamento asignado al empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuDepart</IRI>
+        <Literal>epuDepart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuDescripPlaza</IRI>
+        <Literal>Descripción de la plaza del empleo público ofertado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuDescripPlaza</IRI>
+        <Literal>epuDescripPlaza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuDescripcion</IRI>
+        <Literal>Descripción del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuDescripcion</IRI>
+        <Literal>epuDescripcion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuEnlace</IRI>
+        <Literal>Enlace del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuEnlace</IRI>
+        <Literal>epueEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuEstadoPlazo</IRI>
+        <Literal>Estado del plazo del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuEstadoPlazo</IRI>
+        <Literal>epuEstadoPlazo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuFechaCrea</IRI>
+        <Literal>Fecha creación del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuFechaCrea</IRI>
+        <Literal>epuFechaCrea</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuFormaPago</IRI>
+        <Literal>Forma de pago del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuFormaPago</IRI>
+        <Literal>epuFormaPago</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuGrupo</IRI>
+        <Literal>Grupo al que va dirigida la oferta de empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuGrupo</IRI>
+        <Literal>epuGrupo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuInfoPresent</IRI>
+        <Literal>Información de presentación del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuInfoPresent</IRI>
+        <Literal>epuInfoPresent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuNumPlaza</IRI>
+        <Literal>Número de plazas ofertedas del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuNumPlaza</IRI>
+        <Literal>epuNumPlaza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuPrueba</IRI>
+        <Literal>Prueba del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuPrueba</IRI>
+        <Literal>epuPrueba</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuReduccTasa</IRI>
+        <Literal>Reducción de tasas del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuReduccTasa</IRI>
+        <Literal>epuReduccTasa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuRequisito</IRI>
+        <Literal>Requisitos del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuRequisito</IRI>
+        <Literal>epuRequisito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuTasa</IRI>
+        <Literal>Tasas del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuTasa</IRI>
+        <Literal>epuTasa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuTipoPersonal</IRI>
+        <Literal>Tipo personal al que va el empleo público ofertado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuTipoPersonal</IRI>
+        <Literal>epuTipoPersonal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuTitulEspec</IRI>
+        <Literal>Titulación específica del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuTitulEspec</IRI>
+        <Literal>epuTitulEspec</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epuTitulacion</IRI>
+        <Literal>Titulación a la que va dirigida la oferta de empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epuTitulacion</IRI>
+        <Literal>epuTitulacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueAbrePlazo</IRI>
+        <Literal>Abre plazo de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueAbrePlazo</IRI>
+        <Literal>epueAbrePlazo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueActual</IRI>
+        <Literal>Etapa actual sí/no de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueActual</IRI>
+        <Literal>epueActual</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueCierrePlazo</IRI>
+        <Literal>Cierra plazo de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueCierrePlazo</IRI>
+        <Literal>epueCierrePlazo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueCodigo</IRI>
+        <Literal>Código de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueCodigo</IRI>
+        <Literal>epueCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueDocEntrega</IRI>
+        <Literal>Documentación a entregar de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueDocEntrega</IRI>
+        <Literal>epueDocEntrega</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueEnlce</IRI>
+        <Literal>Enlace de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueEnlce</IRI>
+        <Literal>epueEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueFase</IRI>
+        <Literal>Fase de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueFase</IRI>
+        <Literal>epueFase</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueFechaPubli</IRI>
+        <Literal>Fecha publicación de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueFechaPubli</IRI>
+        <Literal>epueFechaPubli</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueInfoComple</IRI>
+        <Literal>Información complementaria de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueInfoComple</IRI>
+        <Literal>epueInfoComple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueInfoPresent</IRI>
+        <Literal>Información presentación de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueInfoPresent</IRI>
+        <Literal>epueInfoPresent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueMedioPubli</IRI>
+        <Literal>Medio publicación de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueMedioPubli</IRI>
+        <Literal>epueMedioPubli</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueNombre</IRI>
+        <Literal>Nombre de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueNombre</IRI>
+        <Literal>epueNombre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#epueNumPubli</IRI>
+        <Literal>Número de publicación de la etapa del empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#epueNumPubli</IRI>
+        <Literal>epueNumPubli</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinCuantia</IRI>
+        <Literal>Cuantía de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinCuantia</IRI>
+        <Literal>ffinCuantia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinDeptResol</IRI>
+        <Literal>Departamento de resolución de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinDeptResol</IRI>
+        <Literal>ffinDeptResol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinDescripcion</IRI>
+        <Literal>Descripción de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinDescripcion</IRI>
+        <Literal>ffinDescripcion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinEnlace</IRI>
+        <Literal>Enlace de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinEnlace</IRI>
+        <Literal>ffinEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinPlazoMax</IRI>
+        <Literal>Plazo máximo de resolución de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinPlazoMax</IRI>
+        <Literal>ffinPlazoMax</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinProcCobro</IRI>
+        <Literal>Procedimiento de cobro de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinProcCobro</IRI>
+        <Literal>ffinProcCobro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinRecurso</IRI>
+        <Literal>Recursos de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinRecurso</IRI>
+        <Literal>ffinRecurso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ffinSancion</IRI>
+        <Literal>Sanciones de la fase fin del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ffinSancion</IRI>
+        <Literal>ffinSancion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiEnlace</IRI>
+        <Literal>Enlace de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiEnlace</IRI>
+        <Literal>finiEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiFechaFin</IRI>
+        <Literal>Fecha fin de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiFechaFin</IRI>
+        <Literal>finiFechaFin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiFechaIni</IRI>
+        <Literal>Fecha inicio de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiFechaIni</IRI>
+        <Literal>finiFechaIni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiForPresent</IRI>
+        <Literal>Forma de presentación de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiForPresent</IRI>
+        <Literal>finiForPresent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiInteresados</IRI>
+        <Literal>Interesados de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiInteresados</IRI>
+        <Literal>finiInteresados</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiNorma</IRI>
+        <Literal>Normativa de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiNorma</IRI>
+        <Literal>finiNorma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiObjeto</IRI>
+        <Literal>Objetivo de la fase de inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiObjeto</IRI>
+        <Literal>finiObjeto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiPlazoPresent</IRI>
+        <Literal>Plazo  de presentación de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiPlazoPresent</IRI>
+        <Literal>finiPlazoPresent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiRequisitos</IRI>
+        <Literal>Requisitos de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiRequisitos</IRI>
+        <Literal>finiRequisitos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finiTasaPago</IRI>
+        <Literal>Tasas de pago de la fase inicio del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finiTasaPago</IRI>
+        <Literal>finiTasaPago</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finsCriteriosValora</IRI>
+        <Literal>Criterios de valoración en la fase de instrucción del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finsCriteriosValora</IRI>
+        <Literal>finsCriteriosValora</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finsDeptTramita</IRI>
+        <Literal>Departamento de tramitación en la fase de instrucción del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finsDeptTramita</IRI>
+        <Literal>finsDeptTramita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finsEnlace</IRI>
+        <Literal>Enlace en la fase de instrucción del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finsEnlace</IRI>
+        <Literal>finsEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finsInfo</IRI>
+        <Literal>Información de la tramitación en la fase de instrucción del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finsInfo</IRI>
+        <Literal>finsInfo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#finsNorma</IRI>
+        <Literal>Normativa en la fase de instrucción del trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finsNorma</IRI>
+        <Literal>finsNorma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeAsociadoDepartamento</IRI>
+        <Literal>Operción asociado al módulo departamento.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeAsociadoDepartamento</IRI>
+        <Literal>opeAsociadoDepartmento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeAsociadoEELL</IRI>
+        <Literal>Operción asociado al módulo entidad local.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeAsociadoEELL</IRI>
+        <Literal>opeAsociadoEELL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeAsociadoEP</IRI>
+        <Literal>Operción asociado al módulo empleo público.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeAsociadoEP</IRI>
+        <Literal>opeAsociadoEP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeAsociadoPersona</IRI>
+        <Literal>Operción asociado al módulo persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeAsociadoPersona</IRI>
+        <Literal>opeAsociadoPersona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeAsociadoRegistro</IRI>
+        <Literal>Operción asociado al módulo registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeAsociadoRegistro</IRI>
+        <Literal>opeAsociadoRegistro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeAsociadoTramite</IRI>
+        <Literal>Operción asociado al módulo trámites y servicios.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeAsociadoTramite</IRI>
+        <Literal>opeAsociadoTramite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeDescripcion</IRI>
+        <Literal>Descripción de la operacion que se puede realizar.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeDescripcion</IRI>
+        <Literal>opeDescripcion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#opeNombre</IRI>
+        <Literal>Nombre de la operación (Ej. &quot;Consultar&quot;, &quot;Insertar&quot;, &quot;Modificar&quot;, &quot;Eliminar&quot;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#opeNombre</IRI>
+        <Literal>opeNombre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perAdscrito</IRI>
+        <Literal>Indica si la persona está adscrita a un puesto de trabajo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perAdscrito</IRI>
+        <Literal>perAdscrito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perAltogCargo</IRI>
+        <Literal>Indica si la persona ocupa un alto Cargo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perAltogCargo</IRI>
+        <Literal>perAltoCargo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perApellido1</IRI>
+        <Literal>Apellido primero de la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perApellido1</IRI>
+        <Literal>perApellido1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perApellido2</IRI>
+        <Literal>Apellido segundo de la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perApellido2</IRI>
+        <Literal>perApellido2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perCargo</IRI>
+        <Literal>gpeCargo ocupado en caso de alto Cargo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perCargo</IRI>
+        <Literal>perCargo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perCodDep</IRI>
+        <Literal>Código departamento asociado a la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perCodDep</IRI>
+        <Literal>perCodDep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perCodigo</IRI>
+        <Literal>Código identificativo de la persona dentro de la aplicación.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perCodigo</IRI>
+        <Literal>perCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perConselleria</IRI>
+        <Literal>Conselleria a la que pertenece la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perConselleria</IRI>
+        <Literal>perConselleria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perDespacho</IRI>
+        <Literal>Despacho de la persona donde se encuentra trabajando.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perDespacho</IRI>
+        <Literal>perDespacho</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perDireccion</IRI>
+        <Literal>Direcciòn de trabajo de la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perDireccion</IRI>
+        <Literal>perDireccion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perFaxExterno</IRI>
+        <Literal>Fax externo de la oficina.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perFaxExterno</IRI>
+        <Literal>perFaxExterno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perFaxInterno</IRI>
+        <Literal>Fax interno de la oficina.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perFaxInterno</IRI>
+        <Literal>perFaxInterno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perFuncion</IRI>
+        <Literal>Función desempeñada dentro de la organización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perFuncion</IRI>
+        <Literal>perFuncion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perGenero</IRI>
+        <Literal>Género de la persona femenino o masculino.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perGenero</IRI>
+        <Literal>perGenero</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perIdentificacion</IRI>
+        <Literal>Número identidad de la persona DNI/NIF/NIE.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perIdentificacion</IRI>
+        <Literal>perIdentificacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perMunicipio</IRI>
+        <Literal>Municipio donde trabaja la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perMunicipio</IRI>
+        <Literal>perMunicipio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perNacionalidad</IRI>
+        <Literal>Nacionalidad de la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perNacionalidad</IRI>
+        <Literal>perNacionalidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perNombre</IRI>
+        <Literal>Nombre de la persona que figura en su documento de identidad.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perNombre</IRI>
+        <Literal>perNombre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perPerteneceADep</IRI>
+        <Literal>Relación que indica a qué departamento pertenece una persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perPerteneceADep</IRI>
+        <Literal>perPerteneceADep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perPerteneceAReg</IRI>
+        <Literal>Relación que indica a qué registro pertenece una persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perPerteneceAReg</IRI>
+        <Literal>epPerteneceAReg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perPlanta</IRI>
+        <Literal>Ubicación de la planta donde trabaja la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perPlanta</IRI>
+        <Literal>perPlanta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perProvincia</IRI>
+        <Literal>Provincia donde trabaja la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perProvincia</IRI>
+        <Literal>perProvincia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perTelefonExt</IRI>
+        <Literal>Teléfono de la oficina donde está ubicado.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perTelefonExt</IRI>
+        <Literal>perTelefonExt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perTelefonInt</IRI>
+        <Literal>Extensión interna de la oficina.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perTelefonInt</IRI>
+        <Literal>perTelefonInt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perTipoPersonal</IRI>
+        <Literal>Define si la persona es Interno o Externo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perTipoPersonal</IRI>
+        <Literal>perTipoPersonal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perUnidad</IRI>
+        <Literal>Departamento u órgano al que es adscrita la persona.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perUnidad</IRI>
+        <Literal>perUnidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perVisibilidad</IRI>
+        <Literal>Define si la persona es Interna, Oculta o Pública.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perVisibilidad</IRI>
+        <Literal>perVisibilidad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regCP</IRI>
+        <Literal>Código postal dirección del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regCP</IRI>
+        <Literal>regCP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regCodDep</IRI>
+        <Literal>Código departamento asociado al registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regCodDep</IRI>
+        <Literal>regCodDep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regCodigo</IRI>
+        <Literal>Código interno asociado al registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regCodigo</IRI>
+        <Literal>regCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regConselleria</IRI>
+        <Literal>Conselleria a la que pertenece el registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regConselleria</IRI>
+        <Literal>regConselleria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regCorreo</IRI>
+        <Literal>Correo electrónico del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regCorreo</IRI>
+        <Literal>regCorreo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regDireccion</IRI>
+        <Literal>Dirección donde se encuentra ubicado el registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regDireccion</IRI>
+        <Literal>regDireccion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regFaxExt</IRI>
+        <Literal>Fax externo del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regFaxExt</IRI>
+        <Literal>regFaxExt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regFaxInt</IRI>
+        <Literal>Fax interno del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regFaxInt</IRI>
+        <Literal>regFaxInt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regHorario</IRI>
+        <Literal>Horario del registro para atención al ciudadano.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regHorario</IRI>
+        <Literal>regHorario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regMunicipio</IRI>
+        <Literal>Municipio del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regMunicipio</IRI>
+        <Literal>regMunicipio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regNombre</IRI>
+        <Literal>Nombre asignado al registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regNombre</IRI>
+        <Literal>regNombre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regPerteneceADep</IRI>
+        <Literal>Relación que indica a qué departamento pertenece un registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regPerteneceADep</IRI>
+        <Literal>regPerteneceADep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regProvincia</IRI>
+        <Literal>Provincia del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regProvincia</IRI>
+        <Literal>regProvincia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regTelefonExt</IRI>
+        <Literal>Teléfono externo del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regTelefonExt</IRI>
+        <Literal>regTelefonExt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regTelefonInt</IRI>
+        <Literal>Teléfono interno del registro.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regTelefonInt</IRI>
+        <Literal>regTelefonInt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#regTipo</IRI>
+        <Literal>Tipo de registro:
+Registro propio: es el que se presta en las oficinas PROP PROPIAS, en ellos se puede registrar cualquier documento dirigido a la Administración General del Estado, comunidades autónomas y entidades locales (en oficinas PROP de Alicante, Castellón y Valencia, oficina PROP Elche/Elx y en la oficina PROP Mixta de Requena).
+Registro concertado con una entidad local: se puede registrar cualquier documento dirigido a la Administración General del Estado, comunidades autónomas y entidades locales (resto de oficinas PROP).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#regTipo</IRI>
+        <Literal>regTipo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servEnlace</IRI>
+        <Literal>Enlace del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servEnlace</IRI>
+        <Literal>servEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servFechaFin</IRI>
+        <Literal>Fecha fin del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servFechaFin</IRI>
+        <Literal>servFechaFin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servFechaIni</IRI>
+        <Literal>Fecha inicio del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servFechaIni</IRI>
+        <Literal>servFechaIni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servInfoComple</IRI>
+        <Literal>Información complementaria del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servInfoComple</IRI>
+        <Literal>servInfoComple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servInteresados</IRI>
+        <Literal>Interesados del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servInteresados</IRI>
+        <Literal>servInteresados</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servNorma</IRI>
+        <Literal>Normativa del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servNorma</IRI>
+        <Literal>servNorma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servObjeto</IRI>
+        <Literal>Objeto del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servObjeto</IRI>
+        <Literal>servObjeto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servPlazo</IRI>
+        <Literal>Plazo del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servPlazo</IRI>
+        <Literal>servPlazo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#servRequisitos</IRI>
+        <Literal>Requisitos del servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#servRequisitos</IRI>
+        <Literal>servRequisitos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sffjcEnlace</IRI>
+        <Literal>Enlace de justificación y cobro de la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sffjcEnlace</IRI>
+        <Literal>sffjcEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sffjcFechaFin</IRI>
+        <Literal>Fecha fin de justificación y cobro de la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sffjcFechaFin</IRI>
+        <Literal>sffjcFechaFin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sffjcFechaIni</IRI>
+        <Literal>Fecha inicio de justificación y cobro de la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sffjcFechaIni</IRI>
+        <Literal>sffjcFechaIni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sffjcForPresent</IRI>
+        <Literal>Forma de presentación de justificación y cobro de la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sffjcForPresent</IRI>
+        <Literal>sffjcForPresent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sffjcNorma</IRI>
+        <Literal>Normativa de justificación y cobro de la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sffjcNorma</IRI>
+        <Literal>sffjcNorma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sffjcObjeto</IRI>
+        <Literal>Objeto de la subfase de justificación y cobro de la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sffjcObjeto</IRI>
+        <Literal>sffjcObjeto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sffjcPlazo</IRI>
+        <Literal>Plazo presentación de justificación y cobro de la fase de finalización.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sffjcPlazo</IRI>
+        <Literal>sffjcPlazo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sinsaEnlace</IRI>
+        <Literal>Enlace de la subfase de alegación en la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sinsaEnlace</IRI>
+        <Literal>sinsaEnlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sinsaFechaFin</IRI>
+        <Literal>Fecha fin de la subfase de alegación en la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sinsaFechaFin</IRI>
+        <Literal>sinsaFechaFin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sinsaFechaIni</IRI>
+        <Literal>Fecha inicio de la subfase de alegación en la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sinsaFechaIni</IRI>
+        <Literal>sinsaFechaIni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sinsaForPresent</IRI>
+        <Literal>Forma de presentación de la subfase de alegación en la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sinsaForPresent</IRI>
+        <Literal>sinsaForPresent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sinsaNorma</IRI>
+        <Literal>Normativa de la subfase de alegación en la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sinsaNorma</IRI>
+        <Literal>sinsaNorma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sinsaObjeto</IRI>
+        <Literal>Objetivo de la subfase de alegación en la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sinsaObjeto</IRI>
+        <Literal>sinsaObjeto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sinsaPlazo</IRI>
+        <Literal>Plazo de la subfase de alegación en la fase de instrucción.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sinsaPlazo</IRI>
+        <Literal>sinsaPlazo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trsCodigo</IRI>
+        <Literal>Código del trámite o servicio, dependiendo del tipo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trsCodigo</IRI>
+        <Literal>trsCodigo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trsDepart</IRI>
+        <Literal>Relación con departamento que gestiona el trámite.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trsDepart</IRI>
+        <Literal>trsDepart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trsDescripcion</IRI>
+        <Literal>Explicación detallada del trámite o servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trsDescripcion</IRI>
+        <Literal>trsDescripcion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trsDestino</IRI>
+        <Literal>Define si el trámite o servicio está dirigido a ciudadanía, administración, empresas o es interno.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trsDestino</IRI>
+        <Literal>trsDestino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trsObjetivo</IRI>
+        <Literal>Descripción del objetivo de trámite o servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trsObjetivo</IRI>
+        <Literal>trsObjeto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trsPerteneceADep</IRI>
+        <Literal>Relación que indica a qué departamento pertenece trámite o servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trsPerteneceADep</IRI>
+        <Literal>trsPerteneceADep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trsTipo</IRI>
+        <Literal>Tipo de procedimiento, trámite o servicio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trsTipo</IRI>
+        <Literal>trsTipo</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
