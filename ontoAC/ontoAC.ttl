@@ -488,6 +488,14 @@
                rdfs:label "depTipoCentro" .
 
 
+###  http://example.org/ontologia#descripcionError
+:descripcionError rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Error ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Describe la causa o naturaleza del error detectado." ;
+                  rdfs:label "descripcionError" .
+
+
 ###  http://example.org/ontologia#enlCP
 :enlCP rdf:type owl:DatatypeProperty ;
        rdfs:domain :EntidadLocales ;
@@ -838,6 +846,14 @@
               rdfs:range xsd:string ;
               rdfs:comment "Número de publicación de la etapa del empleo público." ;
               rdfs:label "epueNumPubli" .
+
+
+###  http://example.org/ontologia#fechaDeteccion
+:fechaDeteccion rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Error ;
+                rdfs:range xsd:dateTime ;
+                rdfs:comment "Fecha y hora en que se detectó el error." ;
+                rdfs:label "fechaDeteccion" .
 
 
 ###  http://example.org/ontologia#ffinCuantia
@@ -1638,6 +1654,19 @@ _:genid9 rdf:type rdf:List ;
 :EntidadLocales rdf:type owl:Class ;
                 rdfs:comment "Se ofrece información relacionada con la localización de todos los Ayuntamientos, Mancomunidades, Entidades Inframunicipales, Diputaciones y Núcleos de Población de la Comunidad Valenciana." ;
                 rdfs:label "EntidadLocales" .
+
+
+###  http://example.org/ontologia#Error
+:Error rdf:type owl:Class ;
+       rdfs:comment "Representa un error o inconsistencia detectada en los datos." ;
+       rdfs:label "Error" .
+
+
+###  http://example.org/ontologia#ErrorConsistencia
+:ErrorConsistencia rdf:type owl:Class ;
+                   rdfs:subClassOf :Error ;
+                   rdfs:comment "Representa un error de consistencia lógica o relacional entre los datos." ;
+                   rdfs:label "ErrorConsistencia" .
 
 
 ###  http://example.org/ontologia#EtapaFaseEP
