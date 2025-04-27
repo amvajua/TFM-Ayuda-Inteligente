@@ -1,12 +1,12 @@
 # TFM - Ayuda Inteligente para Sistemas de Atención al Ciudadano
 # 1. Descripción del proyecto
 Proyecto desarrollado como Trabajo Fin de Máster en Inteligencia Artificial. 
-El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas de IA, Web Semántica y consultas en lenguaje natural:
+El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas de IA, Web Semántica y consultas en lenguaje natural.
 
 ## 1.1 Objetivos principales
   - Implementar un sistema de **ayuda inteligente contextual** basado en una ontología del dominio.
   - Desarrollar un módulo para realizar **consultas personalizadas en lenguaje natural** con generación de listados desde Oracle.
-  - Integrar una solución semántica para la **detección automática de errores técnicos** en la aplicación web.
+  - Integrar una solución semántica para la **detección automática de errores** en la aplicación web.
 
 ## 1.2 Tecnologías utilizadas
 - **Java + Spring Boot** (Backend)
@@ -21,7 +21,10 @@ El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas
 ```
 TFM-Ayuda-Inteligente/
 ├── backend/     # Backend en Spring Boot + Ontop + conexión a Oracle
-├── frontend/    # Frontend en React + Tailwind
+├── frontend/    # Frontend en React
+├── odba/        # Fichero mapeo datos
+├── ontoAC/      # Ontología implementada en diferentes formatos
+├── TFM_Doc/     # Documento TFM (fase borrador)
 └── README.md    # Este archivo
 ```
 ## 1.4 Ejecución general
