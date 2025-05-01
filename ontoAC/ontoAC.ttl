@@ -138,6 +138,12 @@
  ] .
 
 
+###  http://example.org/ontologia#errorDetectadoEn
+:errorDetectadoEn rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Error ;
+                  rdfs:range owl:Thing .
+
+
 ###  http://example.org/ontologia#opeAsociadoDepartamento
 :opeAsociadoDepartamento rdf:type owl:ObjectProperty ;
                          rdfs:domain :Departamentos ;
@@ -486,14 +492,6 @@
                rdfs:range xsd:string ;
                rdfs:comment "Tipo centro del departamento." ;
                rdfs:label "depTipoCentro" .
-
-
-###  http://example.org/ontologia#descripcionError
-:descripcionError rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Error ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "Describe la causa o naturaleza del error detectado." ;
-                  rdfs:label "descripcionError" .
 
 
 ###  http://example.org/ontologia#enlCP
@@ -848,12 +846,20 @@
               rdfs:label "epueNumPubli" .
 
 
-###  http://example.org/ontologia#fechaDeteccion
-:fechaDeteccion rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Error ;
-                rdfs:range xsd:dateTime ;
-                rdfs:comment "Fecha y hora en que se detectó el error." ;
-                rdfs:label "fechaDeteccion" .
+###  http://example.org/ontologia#errorDescripcion
+:errorDescripcion rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Error ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Describe la causa o naturaleza del error." ;
+                  rdfs:label "errorDescripcion" .
+
+
+###  http://example.org/ontologia#errorFechaDetec
+:errorFechaDetec rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Error ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "Fecha y hora en que se detectó el error." ;
+                 rdfs:label "errorFechaDetec" .
 
 
 ###  http://example.org/ontologia#ffinCuantia
@@ -1667,6 +1673,20 @@ _:genid9 rdf:type rdf:List ;
                    rdfs:subClassOf :Error ;
                    rdfs:comment "Representa un error de consistencia lógica o relacional entre los datos." ;
                    rdfs:label "ErrorConsistencia" .
+
+
+###  http://example.org/ontologia#ErrorDuplicidad
+:ErrorDuplicidad rdf:type owl:Class ;
+                 rdfs:subClassOf :Error ;
+                 rdfs:comment "Representa un error de duplicidad entre los datos." ;
+                 rdfs:label "ErrorDuplicidad" .
+
+
+###  http://example.org/ontologia#ErrorFormato
+:ErrorFormato rdf:type owl:Class ;
+              rdfs:subClassOf :Error ;
+              rdfs:comment "Representa un error de formato entre los datos." ;
+              rdfs:label "ErrorFormato" .
 
 
 ###  http://example.org/ontologia#EtapaFaseEP

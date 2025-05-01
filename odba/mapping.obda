@@ -261,8 +261,8 @@ target      :empleoPublico_{EPU_CODIGO} :epuTitulacion "{EPU_TITULACION}"^^xsd:s
 source      SELECT EPU_CODIGO, EPU_TITULACION FROM SYSTEM.AC_EMPLEO_PUBLICO
 
 mappingId   empleoPublicoPerteneceADep
-target      :empleoPublico_{EPU_CODIGO} :epuPerteneceADep :departamento_{DEP_CODIGO} .
-source      SELECT EPU_CODIGO, DEP_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE DEP_CODIGO IS NOT NULL
+target      :empleoPublico_{EPU_CODIGO} :epuPerteneceADep :departamento_{EPU_DEPCOD} .
+source      SELECT EPU_CODIGO, EPU_DEPCOD FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE EPU_DEPCOD IS NOT NULL
 
 mappingId   etapaCodigo
 target      :etapa_{EPUE_CODIGO} a :EtapaFaseEP .
@@ -350,8 +350,8 @@ target      :tramiteServicio_{TRS_CODIGO} :trsTipo "{TRS_TIPO}"^^xsd:string .
 source      SELECT TRS_CODIGO, TRS_TIPO FROM SYSTEM.AC_TRAMITES_SERVICIOS
 
 mappingId   tramiteServicioPerteneceADep
-target      :tramiteServicio_{TRS_CODIGO} :trsPerteneceA :departamento_{DEP_CODIGO} .
-source      SELECT TRS_CODIGO, DEP_CODIGO FROM SYSTEM.AC_TRAMITES_SERVICIOS
+target      :tramiteServicio_{TRS_CODIGO} :trsPerteneceA :departamento_{TRS_DEPCOD} .
+source      SELECT TRS_CODIGO, TRS_DEPCOD FROM SYSTEM.AC_TRAMITES_SERVICIOS
 
 mappingId   faseInicioCodigo
 target      :faseInicio_{FINI_CODIGO} a :FaseInicio .
@@ -398,8 +398,8 @@ target      :faseInicio_{FINI_CODIGO} :finiNorma "{FINI_NORMA}"^^xsd:string .
 source      SELECT FINI_CODIGO, FINI_NORMA FROM SYSTEM.AC_FASE_INICIO
 
 mappingId   faseInicioPerteneceATramite
-target      :faseInicio_{FINI_CODIGO} :finiPerteneceA :tramiteServicio_{TRS_CODIGO} .
-source      SELECT FINI_CODIGO, TRS_CODIGO FROM SYSTEM.AC_FASE_INICIO
+target      :faseInicio_{FINI_CODIGO} :finiPerteneceA :tramiteServicio_{FINI_TRSCOD} .
+source      SELECT FINI_CODIGO, FINI_TRSCOD FROM SYSTEM.AC_FASE_INICIO
 
 mappingId   faseInstruccionCodigo
 target      :faseInstruccion_{FINS_CODIGO} a :FaseInstruccion .
@@ -426,8 +426,8 @@ target      :faseInstruccion_{FINS_CODIGO} :finsNorma "{FINS_NORMA}"^^xsd:string
 source      SELECT FINS_CODIGO, FINS_NORMA FROM SYSTEM.AC_FASE_INSTRUCCION
 
 mappingId   faseInstruccionPerteneceATramite
-target      :faseInstruccion_{FINS_CODIGO} :finsPerteneceA :tramiteServicio_{TRS_CODIGO} .
-source      SELECT FINS_CODIGO, TRS_CODIGO FROM SYSTEM.AC_FASE_INSTRUCCION
+target      :faseInstruccion_{FINS_CODIGO} :finsPerteneceA :tramiteServicio_{FINS_TRSCOD} .
+source      SELECT FINS_CODIGO, FINS_TRSCOD FROM SYSTEM.AC_FASE_INSTRUCCION
 
 mappingId   subfaseAlegacionCodigo
 target      :subfaseAlegacion_{SALG_CODIGO} a :SubFaseAlegacion .
@@ -462,8 +462,8 @@ target      :subfaseAlegacion_{SALG_CODIGO} :sinsaNorma "{SALG_NORMA}"^^xsd:stri
 source      SELECT SALG_CODIGO, SALG_NORMA FROM SYSTEM.AC_SUBFASE_ALEGACION
 
 mappingId   subfaseAlegacionPerteneceAFase
-target      :subfaseAlegacion_{SALG_CODIGO} :sinsaPerteneceA :faseInstruccion_{FINS_CODIGO} .
-source      SELECT SALG_CODIGO, FINS_CODIGO FROM SYSTEM.AC_SUBFASE_ALEGACION
+target      :subfaseAlegacion_{SALG_CODIGO} :sinsaPerteneceA :faseInstruccion_{SALG_FINSCOD} .
+source      SELECT SALG_CODIGO, SALG_FINSCOD FROM SYSTEM.AC_SUBFASE_ALEGACION
 
 mappingId   faseFinTipo
 target      :faseFin_{FFIN_CODIGO} a :FaseFin .
@@ -502,8 +502,8 @@ target      :faseFin_{FFIN_CODIGO} :ffinEnlace "{FFIN_ENLACE}"^^xsd:string .
 source      SELECT FFIN_CODIGO, FFIN_ENLACE FROM SYSTEM.AC_FASE_FIN
 
 mappingId   faseFinPerteneceATramite
-target      :faseFin_{FFIN_CODIGO} :ffinPerteneceA :tramiteServicio_{TRS_CODIGO} .
-source      SELECT FFIN_CODIGO, TRS_CODIGO FROM SYSTEM.AC_FASE_FIN
+target      :faseFin_{FFIN_CODIGO} :ffinPerteneceA :tramiteServicio_{FFIN_TRSCOD} .
+source      SELECT FFIN_CODIGO, FFIN_TRSCOD FROM SYSTEM.AC_FASE_FIN
 
 mappingId   subfaseJustCobroTipo
 target      :subfaseJustCobro_{SJCO_CODIGO} a :SubFaseJustCobro .
@@ -538,8 +538,8 @@ target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcNorma "{SJCO_NORMA}"^^xsd:stri
 source      SELECT SJCO_CODIGO, SJCO_NORMA FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
 
 mappingId   subfaseJustCobroPerteneceAFin
-target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcPerteneceA :faseFin_{FFIN_CODIGO} .
-source      SELECT SJCO_CODIGO, FFIN_CODIGO FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
+target      :subfaseJustCobro_{SJCO_CODIGO} :sffjcPerteneceA :faseFin_{SJCO_FFINCOD} .
+source      SELECT SJCO_CODIGO, SJCO_FFINCOD FROM SYSTEM.AC_SUBFASE_JUSTIFICACION_COBRO
 
 mappingId   servicioTipo
 target      :servicio_{SERV_CODIGO} a :Servicio .
@@ -770,5 +770,137 @@ mappingId   registroPerteneceADep
 target      :registro_{REG_CODIGO} :regPerteneceADep :departamento_{REG_COD_DEP} .
 source      SELECT REG_CODIGO, REG_COD_DEP FROM SYSTEM.AC_REGISTROS WHERE REG_COD_DEP IS NOT NULL
 
+mappingId   registroCodigo
+target      :registro_{REG_CODIGO} :regCodigo "{REG_CODIGO}"^^xsd:integer .
+source      SELECT REG_CODIGO FROM SYSTEM.AC_REGISTROS
+
+
+mappingId errorTramiteTipo
+target :error_tramite_{TRS_CODIGO} a :ErrorConsistencia .
+source SELECT TRS_CODIGO FROM SYSTEM.AC_TRAMITES_SERVICIOS WHERE TRS_DEPCOD IS NULL
+
+mappingId errorTramiteDescripcion
+target :error_tramite_{TRS_CODIGO} :errorDescripcion "El trámite no tiene departamento asignado" .
+source SELECT TRS_CODIGO FROM SYSTEM.AC_TRAMITES_SERVICIOS WHERE TRS_DEPCOD IS NULL
+
+mappingId errorTramiteFecha
+target :error_tramite_{TRS_CODIGO} :errorFechaDetec "2025-05-01T00:00:00"^^xsd:dateTime .
+source SELECT TRS_CODIGO FROM SYSTEM.AC_TRAMITES_SERVICIOS WHERE TRS_DEPCOD IS NULL
+
+mappingId errorTramiteDetectadoEn
+target :error_tramite_{TRS_CODIGO} :errorDetectadoEn :tramite_{TRS_CODIGO} .
+source SELECT TRS_CODIGO FROM SYSTEM.AC_TRAMITES_SERVICIOS WHERE TRS_DEPCOD IS NULL
+
+mappingId   errorPersonaTipo
+target      :error_persona_{PER_CODIGO} a :ErrorConsistencia .
+source      SELECT PER_CODIGO FROM SYSTEM.AC_PERSONAS WHERE PER_CODDEP IS NULL
+
+mappingId   errorPersonaDescripcion
+target      :error_persona_{PER_CODIGO} :errorDescripcion "La persona no tiene departamento asignado" .
+source      SELECT PER_CODIGO FROM SYSTEM.AC_PERSONAS WHERE PER_CODDEP IS NULL
+
+mappingId   errorPersonaFecha
+target      :error_persona_{PER_CODIGO} :errorFechaDetec "2025-05-01T00:00:00"^^xsd:dateTime .
+source      SELECT PER_CODIGO FROM SYSTEM.AC_PERSONAS WHERE PER_CODDEP IS NULL
+
+mappingId   errorPersonaDetectadoEn
+target      :error_persona_{PER_CODIGO} :errorDetectadoEn :persona_{PER_CODIGO} .
+source      SELECT PER_CODIGO FROM SYSTEM.AC_PERSONAS WHERE PER_CODDEP IS NULL
+
+mappingId   errorFaseInicioFechasTipo
+target      :error_faseInicioFechas_{FINI_CODIGO} a :ErrorConsistencia .
+source      SELECT FINI_CODIGO FROM SYSTEM.AC_FASE_INICIO
+            WHERE FINI_FECHA_FIN < FINI_FECHA_INI
+
+mappingId   errorFaseInicioDescripcion
+target      :error_faseInicioFechas_{FINI_CODIGO} :errorDescripcion "La fecha de finalización es anterior a la fecha de inicio" .
+source      SELECT FINI_CODIGO FROM SYSTEM.AC_FASE_INICIO
+            WHERE FINI_FECHA_FIN < FINI_FECHA_INI
+
+mappingId   errorFaseInicioFecha
+target      :error_faseInicioFechas_{FINI_CODIGO} :errorFechaDetec "2025-05-01T00:00:00"^^xsd:dateTime .
+source      SELECT FINI_CODIGO FROM SYSTEM.AC_FASE_INICIO
+            WHERE FINI_FECHA_FIN < FINI_FECHA_INI
+
+mappingId   errorFaseInicioDetectadoEn
+target      :error_faseInicioFechas_{FINI_CODIGO} :errorDetectadoEn :faseInicio_{FINI_CODIGO} .
+source      SELECT FINI_CODIGO FROM SYSTEM.AC_FASE_INICIO
+            WHERE FINI_FECHA_FIN < FINI_FECHA_INI
+
+mappingId   errorEmpleoDescripcionTipo
+target      :error_empleoDescripcion_{EPU_CODIGO} a :ErrorConsistencia .
+source      SELECT EPU_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE EPU_DESCRIPCION IS NULL
+
+mappingId   errorEmpleoDescripcionTexto
+target      :error_empleoDescripcion_{EPU_CODIGO} :errorDescripcion "El campo EPU_DESCRIPCION es obligatorio y está vacío" .
+source      SELECT EPU_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE EPU_DESCRIPCION IS NULL
+
+mappingId   errorEmpleoDescripcionFecha
+target      :error_empleoDescripcion_{EPU_CODIGO} :errorFechaDetec "2025-05-01T00:00:00"^^xsd:dateTime .
+source      SELECT EPU_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE EPU_DESCRIPCION IS NULL
+
+mappingId   errorEmpleoDescripcionDetectadoEn
+target      :error_empleoDescripcion_{EPU_CODIGO} :errorDetectadoEn :empleoPublico_{EPU_CODIGO} .
+source      SELECT EPU_CODIGO FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE EPU_DESCRIPCION IS NULL
+
+mappingId   errorFormatoRegistroTipo
+target      :error_registroFormato_{REG_CODIGO} a :ErrorFormato .
+source      SELECT REG_CODIGO FROM SYSTEM.AC_REGISTROS WHERE REG_CP IS NOT NULL AND REGEXP_LIKE(REG_CP, '[^0-9]')
+
+mappingId   errorFormatoRegistroDescripcion
+target      :error_registroFormato_{REG_CODIGO} :errorDescripcion "El código postal contiene caracteres no numéricos" .
+source      SELECT REG_CODIGO FROM SYSTEM.AC_REGISTROS WHERE REG_CP IS NOT NULL AND REGEXP_LIKE(REG_CP, '[^0-9]')
+
+mappingId   errorFormatoRegistroFecha
+target      :error_registroFormato_{REG_CODIGO} :errorFechaDetec "2025-05-01T00:00:00"^^xsd:dateTime .
+source      SELECT REG_CODIGO FROM SYSTEM.AC_REGISTROS WHERE REG_CP IS NOT NULL AND REGEXP_LIKE(REG_CP, '[^0-9]')
+
+mappingId   errorFormatoRegistroDetectadoEn
+target      :error_registroFormato_{REG_CODIGO} :errorDetectadoEn :registro_{REG_CODIGO} .
+source      SELECT REG_CODIGO FROM SYSTEM.AC_REGISTROS WHERE REG_CP IS NOT NULL AND REGEXP_LIKE(REG_CP, '[^0-9]')
+
+mappingId   errorPersonaDuplicadaTipo
+target      :error_personaDuplicada_{PER_CODIGO} a :ErrorDuplicidad .
+source      SELECT PER_CODIGO
+            FROM AC_PERSONAS
+            WHERE PER_IDENTIFICACION IN (
+              SELECT PER_IDENTIFICACION
+              FROM AC_PERSONAS
+              GROUP BY PER_IDENTIFICACION
+              HAVING COUNT(*) > 1
+            )
+
+mappingId   errorPersonaDuplicadaDescripcion
+target      :error_personaDuplicada_{PER_CODIGO} :errorDescripcion "Identificación duplicada en el sistema" .
+source      SELECT PER_CODIGO
+            FROM AC_PERSONAS
+            WHERE PER_IDENTIFICACION IN (
+              SELECT PER_IDENTIFICACION
+              FROM AC_PERSONAS
+              GROUP BY PER_IDENTIFICACION
+              HAVING COUNT(*) > 1
+            )
+
+mappingId   errorPersonaDuplicadaFecha
+target      :error_personaDuplicada_{PER_CODIGO} :errorFechaDetec "2025-05-01T00:00:00"^^xsd:dateTime .
+source      SELECT PER_CODIGO
+            FROM AC_PERSONAS
+            WHERE PER_IDENTIFICACION IN (
+              SELECT PER_IDENTIFICACION
+              FROM AC_PERSONAS
+              GROUP BY PER_IDENTIFICACION
+              HAVING COUNT(*) > 1
+            )
+
+mappingId   errorPersonaDuplicadaDetectadoEn
+target      :error_personaDuplicada_{PER_CODIGO} :errorDetectadoEn :persona_{PER_CODIGO} .
+source      SELECT PER_CODIGO
+            FROM AC_PERSONAS
+            WHERE PER_IDENTIFICACION IN (
+              SELECT PER_IDENTIFICACION
+              FROM AC_PERSONAS
+              GROUP BY PER_IDENTIFICACION
+              HAVING COUNT(*) > 1
+            )
 
 ]] 
