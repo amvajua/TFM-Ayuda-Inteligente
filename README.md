@@ -15,7 +15,6 @@ El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas
 - **Ontop + Oracle DB** (Mapeo OBDA)
 - **OpenAI API** (Procesamiento del lenguaje natural)
 - **Docker** (Entorno de despliegue)
-- **Elasticsearch (opcional)** para la parte de logs y errores
 
 ## 1.3 Estructura del Proyecto
 ```
