@@ -46,6 +46,8 @@ const BotonAyuda = () => {
 
   const [mostrarBotonDescarga, setMostrarBotonDescarga] = useState(false);
   const [ultimaPregunta, setUltimaPregunta] = useState("");
+  const [tiempoRespuesta, setTiempoRespuesta] = useState(null);
+
 
   const enviarMensaje = async () => {
     if (mensaje.trim() === "") return;
@@ -56,9 +58,17 @@ const BotonAyuda = () => {
     setMensaje("");
     setEscribiendo(true);
 
+    const start = performance.now();
+
     try {
       const respuestaTexto = await consultarAyuda(mensaje);
       console.log("Respuesta obtenida en texto:", respuestaTexto);
+
+      const end = performance.now(); //  Mide el tiempo al recibir respuesta
+      const duracion = ((end - start) / 1000).toFixed(2); // En segundos
+      console.log(`Tiempo de respuesta: ${duracion}s`);
+      setTiempoRespuesta(duracion); // Guarda duración en el estado
+
 
       setMensajes((prevMensajes) => [
         ...prevMensajes,
@@ -130,6 +140,12 @@ const BotonAyuda = () => {
               </div>
 
               <div className="h-64 overflow-y-auto space-y-2 p-2 bg-gray-50 rounded">
+                {tiempoRespuesta && (
+                  <p className="text-sm text-gray-600 mt-1 italic">
+                    ⏱ Tiempo de respuesta: {tiempoRespuesta} segundos
+                  </p>
+                )}
+
                 {mensajes.map((msg, index) => (
                   <motion.div
                     key={index}
@@ -144,6 +160,9 @@ const BotonAyuda = () => {
                   >
                     {Array.isArray(msg.texto) && msg.texto.length > 0 ? (
                       <div className="overflow-x-auto mt-1">
+                          <p className="text-gray-600 text-xs italic mb-1">
+                              Mostrando los primeros 20 resultados.
+                          </p>
                         <table className="table-auto border-collapse border border-gray-400 text-sm">
                           <thead>
                             <tr>

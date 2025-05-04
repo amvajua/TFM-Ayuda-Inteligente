@@ -89,8 +89,9 @@ public class OpenAiService {
                 }
 
                 String consultaLimpia = limpiarConsulta(consultaSPARQL);
-                cacheSPARQL.put(pregunta, consultaLimpia);
-                return consultaLimpia;
+                String consultaConLimite = aplicarLimiteConsulta(consultaLimpia, 20);
+                cacheSPARQL.put(pregunta, consultaConLimite);
+                return consultaConLimite;
             }
         }
     }
@@ -173,16 +174,62 @@ public class OpenAiService {
         }
     }
 
-    public String cargarPromptDatos() throws IOException {
+    /*public String cargarPromptDatos() throws IOException {
         ClassPathResource resource = new ClassPathResource("prompts/contexto-general.txt");
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8))) {
+            return reader.lines().collect(Collectors.joining("\n"));
+        }
+    }*/
+
+    /*public String construirPrompt(String preguntaUsuario) throws IOException {
+        String contexto;
+        contexto = cargarPromptDatos();
+        return contexto + "\n\nPregunta: \"" + preguntaUsuario + "\"\nRespuesta:";
+    }*/
+
+    public String construirPrompt(String preguntaUsuario) throws IOException {
+        String contexto;
+        if (esPreguntaDeAyuda(preguntaUsuario)) {
+            contexto = cargarPromptDesdeArchivo("prompts/contexto-general.txt"); // Ayuda inteligente
+        } else {
+            contexto = cargarPromptDesdeArchivo("prompts/consultas-personalizadas.txt"); // Consultas personalizadas
+        }
+
+        return contexto + "\n\"" + preguntaUsuario + "\"\n";
+    }
+
+    public String cargarPromptDesdeArchivo(String path) throws IOException {
+        ClassPathResource resource = new ClassPathResource(path);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8))) {
             return reader.lines().collect(Collectors.joining("\n"));
         }
     }
 
-    public String construirPrompt(String preguntaUsuario) throws IOException {
-        String contexto;
-        contexto = cargarPromptDatos();
-        return contexto + "\n\nPregunta: \"" + preguntaUsuario + "\"\nRespuesta:";
+    public boolean esPreguntaDeAyuda(String pregunta) {
+        String lower = pregunta.toLowerCase();
+        return lower.contains("qué significa") ||
+                lower.contains("cómo se usa") ||
+                lower.contains("para qué sirve") ||
+                lower.contains("campo") ||
+                lower.contains("obligatorio") ||
+                lower.contains("ejemplo") ||
+                lower.contains("regla") ||
+                lower.contains("uso del campo");
     }
+    public String aplicarLimiteConsulta(String consulta, int limite) {
+        if (!consulta.toLowerCase().contains("limit")) {
+            consulta = consulta.trim();
+            if (!consulta.endsWith("}")) {
+                consulta += "\n";
+            }
+            consulta += "\nLIMIT " + limite;
+        }
+        return consulta;
+    }
+    public String eliminarLimit(String consulta) {
+        return consulta.replaceAll("(?i)LIMIT\\s+\\d+", "").trim();
+    }
+
+
+
 }

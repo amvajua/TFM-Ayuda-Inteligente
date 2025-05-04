@@ -77,14 +77,15 @@ public class AyudaController {
         try {
             // 1. Generar consulta SPARQL con OpenAI
             String consultaSPARQL = openAiService.generarConsultaSPARQL(pregunta);
-            String consultaLimpia = openAiService.limpiarConsulta(consultaSPARQL);
+            //String consultaLimpia = openAiService.limpiarConsulta(consultaSPARQL);
+            String consultaSinLimite = openAiService.eliminarLimit(consultaSPARQL);
 
-            if (!consultaLimpia.toUpperCase().contains("SELECT")) {
+            if (!consultaSinLimite.toUpperCase().contains("SELECT")) {
                 return ResponseEntity.badRequest().body("Consulta inválida".getBytes());
             }
 
             // 2. Ejecutar en Ontop (ya que todo va a Ontop ahora)
-            Map<String, Object> resultado = sparqlService.ejecutarConsultaOntop(consultaLimpia);
+            Map<String, Object> resultado = sparqlService.ejecutarConsultaOntop(consultaSinLimite);
             List<Map<String, String>> datos = (List<Map<String, String>>) resultado.get("resultado");
 
             // 3. Generar Excel
