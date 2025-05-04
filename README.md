@@ -6,7 +6,7 @@ El objetivo es mejorar los sistemas de atención al ciudadano mediante técnicas
 ## 1.1 Objetivos principales
   - Implementar un sistema de **ayuda inteligente contextual** basado en una ontología del dominio.
   - Desarrollar un módulo para realizar **consultas personalizadas en lenguaje natural** con generación de listados desde Oracle.
-  - Integrar una solución semántica para la **detección automática de errores** en la aplicación web.
+  - Integrar una solución semántica para la **detección semántica de errores** en la aplicación web.
 
 ## 1.2 Tecnologías utilizadas
 - **Java + Spring Boot** (Backend)
@@ -50,8 +50,10 @@ npm start
 - [x] Backend conectado a Oracle mediante Ontop
 - [x] Botón de ayuda contextual operativo
 - [x] Consultas en lenguaje natural con OpenAI y SPARQL
-- [ ] Detección semántica de errores en fase de integración
-- [ ] Validación completa con métricas (en progreso)
+- [x] Detección semántica de errores con Ontop
+- [x] Evaluación detección semántica de errores
+- [x] Evaluación botón ayuda inteligente
+- [ ] Evaluación consultas personalizadas en progreso 
 
 --------------------------------------------------------------------------------------------
 ## 1.6 Backend (`/backend`)
