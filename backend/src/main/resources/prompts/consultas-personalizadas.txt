@@ -64,6 +64,7 @@ Propiedades de empleoPublico:
 - :epuTitulacion (xsd:string)
 - :epuReduccTasa (xsd:string)
 - :epuPerteneceADep (xsd:integer)
+- :epuDepCod (xsd:integer)
 
 Propiedades de etapa:
 - :epueCodigo (xsd:integer)
@@ -287,6 +288,7 @@ WHERE {
 
   ?registro :regProvincia "Valencia"^^xsd:string .
 }
+
 Relaciones jerárquicas importantes que debes respetar en las consultas:
 
 - Una fase de inicio pertenece a un trámite o servicio:
@@ -305,6 +307,32 @@ Relaciones jerárquicas importantes que debes respetar en las consultas:
   ?subfaseJustCobro :sffjcPerteneceA ?faseFinal
 
 IMPORTANTE: No inviertas estas relaciones. No utilices construcciones del tipo:
-  ?tramiteServicio :trsPerteneceA ?faseInicio  ❌ (incorrecto)
+  ?tramiteServicio :trsPerteneceA ?faseInicio  (incorrecto)
 
-Siempre respeta la dirección que va desde la subentidad hacia la entidad principal.
+- Siempre respeta la dirección que va desde la subentidad hacia la entidad principal.
+Si una propiedad es de tipo objeto (como :epuPerteneceADep, :perPerteneceADep, :perPerteneceAReg),
+y se menciona un ID o código en la pregunta (por ejemplo, departamento 101),
+usa el IRI :departamento_101, :registro_5, etc. Nunca utilices un número literal.
+- Utiliza correctamente los filtros:
+Ejemplo:
+Pregunta: Listado de etapas de convocatorias cuya fase actual esté en “Fase 1”. Mostrar: convocatoria de empleo público, nombre etapa, fase, fecha de apertura, enlace
+SPARQL:
+PREFIX : <http://example.org/ontologia#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?convocatoria ?nombreEtapa ?fase ?fechaApertura ?enlace
+WHERE {
+  ?etapa :epueNombre ?nombreEtapa ;
+         :epueFase ?fase ;
+         :epueAbrePlazo ?fechaApertura ;
+         :epueEnlace ?enlace ;
+         :epueActual ?actual ;
+         :epuePerteneceA ?convocatoriaURI .
+
+  ?convocatoriaURI :epuConvocatoria ?convocatoria .
+
+  FILTER(?fase = "Fase 1"^^xsd:string && ?actual = "Sí"^^xsd:string)
+}
+
+
+
