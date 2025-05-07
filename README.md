@@ -53,8 +53,11 @@ npm start
 - [x] Detección semántica de errores con Ontop
 - [x] Evaluación detección semántica de errores
 - [x] Evaluación botón ayuda inteligente
-- [ ] Evaluación consultas personalizadas en progreso 
-
+- [x] Evaluación consultas personalizadas 
+- [ ] Revisión fase1 (en progreso)
+- [ ] Creación memoria TFM: formato de artículo científico IEEE, entre 6 y 15 páginas (en progreso):
+      Problema que se propone resolver, una revisión del estado del arte, la propuesta de solución,
+      la evaluación (teorías, resultados, comparativas) de la solución y las conclusiones.
 --------------------------------------------------------------------------------------------
 ## 1.6 Backend (`/backend`)
 - **Tecnología:** Java 8 + Spring Boot
