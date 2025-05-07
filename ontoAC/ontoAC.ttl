@@ -116,22 +116,22 @@
                          rdfs:label "criterioAsociadoTramite" .
 
 
-###  http://example.org/ontologia#epPerteneceADep
-:epPerteneceADep rdf:type owl:ObjectProperty ;
-                 rdfs:domain :EmpleoPublico ;
-                 rdfs:range :Departamentos ;
-                 rdfs:comment "Define la relación entre un Departamento y el empleo público." ;
-                 rdfs:label "epPerteneceADep" .
+###  http://example.org/ontologia#epuPerteneceADep
+:epuPerteneceADep rdf:type owl:ObjectProperty ;
+                  rdfs:domain :EmpleoPublico ;
+                  rdfs:range :Departamentos ;
+                  rdfs:comment "Define la relación entre un Departamento y el empleo público." ;
+                  rdfs:label "epuPerteneceADep" .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :epPerteneceADep ;
+   owl:annotatedSource :epuPerteneceADep ;
    owl:annotatedProperty rdfs:domain ;
    owl:annotatedTarget :EmpleoPublico ;
    rdfs:comment "El empleo público tiene asignado un departamento, órgano o unidad del que pertenece."
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :epPerteneceADep ;
+   owl:annotatedSource :epuPerteneceADep ;
    owl:annotatedProperty rdfs:range ;
    owl:annotatedTarget :Departamentos ;
    rdfs:comment "Departamentos de la administración pública de la GVA que ofertan empleo público."
@@ -212,7 +212,7 @@
                   rdfs:domain :Personas ;
                   rdfs:range :Registros ;
                   rdfs:comment "Relación que indica a qué registro pertenece una persona." ;
-                  rdfs:label "epPerteneceAReg" .
+                  rdfs:label "perPerteneceAReg" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :perPerteneceAReg ;
@@ -606,6 +606,14 @@
                  rdfs:label "epuConvocatoria" .
 
 
+###  http://example.org/ontologia#epuDepCod
+:epuDepCod rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EmpleoPublico ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Código del departamento en el que está relacionado el empleo público." ;
+           rdfs:label "epuDepCod" .
+
+
 ###  http://example.org/ontologia#epuDepart
 :epuDepart rdf:type owl:DatatypeProperty ;
            rdfs:domain :EmpleoPublico ;
@@ -635,7 +643,7 @@
            rdfs:domain :EmpleoPublico ;
            rdfs:range xsd:string ;
            rdfs:comment "Enlace del empleo público." ;
-           rdfs:label "epueEnlace" .
+           rdfs:label "epuEnlace" .
 
 
 ###  http://example.org/ontologia#epuEstadoPlazo

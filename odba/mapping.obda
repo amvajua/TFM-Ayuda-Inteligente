@@ -214,7 +214,7 @@ source      SELECT EPU_CODIGO, EPU_ESTADO_PLAZO FROM SYSTEM.AC_EMPLEO_PUBLICO
 
 mappingId   empleoPublicoFechaCrea
 target      :empleoPublico_{EPU_CODIGO} :epuFechaCrea "{EPU_FECHA_CREA}"^^xsd:string .
-source      SELECT EPU_CODIGO, TO_CHAR(EPU_FECHA_CREA, 'YYYY-MM-DD') AS EPU_FECHA_CREA FROM SYSTEM.AC_EMPLEO_PUBLICO
+source      SELECT EPU_CODIGO, EPU_FECHA_CREA AS EPU_FECHA_CREA FROM SYSTEM.AC_EMPLEO_PUBLICO
 
 mappingId   empleoPublicoFormaPago
 target      :empleoPublico_{EPU_CODIGO} :epuFormaPago "{EPU_FORMA_PAGO}"^^xsd:string .
@@ -259,6 +259,10 @@ source      SELECT EPU_CODIGO, EPU_TITUL_ESPEC FROM SYSTEM.AC_EMPLEO_PUBLICO
 mappingId   empleoPublicoTitulacion
 target      :empleoPublico_{EPU_CODIGO} :epuTitulacion "{EPU_TITULACION}"^^xsd:string .
 source      SELECT EPU_CODIGO, EPU_TITULACION FROM SYSTEM.AC_EMPLEO_PUBLICO
+
+mappingId   empleoPublicoDepCod
+target      :empleoPublico_{EPU_CODIGO} :epuDepCod "{EPU_DEPCOD}"^^xsd:integer .
+source      SELECT EPU_CODIGO, EPU_DEPCOD FROM SYSTEM.AC_EMPLEO_PUBLICO WHERE EPU_DEPCOD IS NOT NULL
 
 mappingId   empleoPublicoPerteneceADep
 target      :empleoPublico_{EPU_CODIGO} :epuPerteneceADep :departamento_{EPU_DEPCOD} .
