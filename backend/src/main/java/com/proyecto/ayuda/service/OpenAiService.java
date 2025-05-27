@@ -114,6 +114,9 @@ public class OpenAiService {
     }
 
     public String limpiarConsulta(String consulta) {
+
+        System.out.println("🧪 SPARQL FINAL COMPLETA:\n" + consulta);
+
         String limpia = consulta
                 .replaceFirst("(?i)^sparql", "")
                 .replaceAll("[`]", "")  // Elimina comillas invertidas
@@ -190,8 +193,10 @@ public class OpenAiService {
     public String construirPrompt(String preguntaUsuario) throws IOException {
         String contexto;
         if (esPreguntaDeAyuda(preguntaUsuario)) {
-            contexto = cargarPromptDesdeArchivo("prompts/contexto-general.txt"); // Ayuda inteligente
+            System.out.println("🟡 Prompt cargado desde: prompts/contexto-general_v2.txt (Ayuda inteligente)");
+            contexto = cargarPromptDesdeArchivo("prompts/contexto-general_v2.txt"); // Ayuda inteligente
         } else {
+            System.out.println("🔵 Prompt cargado desde: prompts/consultas-personalizadas.txt (Consultas personalizadas)");
             contexto = cargarPromptDesdeArchivo("prompts/consultas-personalizadas.txt"); // Consultas personalizadas
         }
 
@@ -214,6 +219,22 @@ public class OpenAiService {
                 lower.contains("obligatorio") ||
                 lower.contains("ejemplo") ||
                 lower.contains("regla") ||
+                lower.contains("tengo que") ||
+                lower.contains("qué información") ||
+                lower.contains("qué formato") ||
+                lower.contains("cómo se indica") ||
+                lower.contains("cómo se debe") ||
+                lower.contains("cómo se debe completar") ||
+                lower.contains("cómo introduzco") ||
+                lower.contains("cómo se asigna") ||
+                lower.contains("qué implica") ||
+                lower.contains("a qué se refiere") ||
+                lower.contains("puedo dejar sin rellenar") ||
+                lower.contains("se puede") ||
+                lower.contains("es válido") ||
+                lower.contains("qué tipo de") ||
+                lower.contains("fecha publicación") ||
+                lower.contains("conselleria en") ||
                 lower.contains("uso del campo");
     }
     public String aplicarLimiteConsulta(String consulta, int limite) {

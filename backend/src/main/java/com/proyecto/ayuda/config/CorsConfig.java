@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")  // Aplica CORS solo a las rutas de la API
-                        .allowedOrigins("http://localhost:5173") // Permite solicitudes desde React
+                        .allowedOrigins("http://localhost:5173", "http://localhost:5174") // Permite solicitudes desde React
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
                         .allowedHeaders("*") // Permite todos los headers
                         .allowCredentials(true); // Permite cookies y autenticación

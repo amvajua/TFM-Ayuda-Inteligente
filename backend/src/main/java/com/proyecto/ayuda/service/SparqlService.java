@@ -34,10 +34,24 @@ public class SparqlService {
         System.out.println("CONSULTA ENVIADA A ONTOP:\n" + sparql); // LOG
 
         String endpointUrl = "http://localhost:8080/sparql";
-        URL url = new URL(endpointUrl + "?query=" + URLEncoder.encode(sparql, "UTF-8"));
+        /*URL url = new URL(endpointUrl + "?query=" + URLEncoder.encode(sparql, "UTF-8"));
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestMethod("GET");
+        connection.setRequestMethod("GET");*/
+        // Cuerpo de la petición
+        String encodedQuery = "query=" + URLEncoder.encode(sparql, "UTF-8");
+
+        URL url = new URL(endpointUrl);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("POST");
+        connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
         connection.setRequestProperty("Accept", "application/sparql-results+json");
+        connection.setDoOutput(true);
+
+       // Enviar el cuerpo
+        connection.getOutputStream().write(encodedQuery.getBytes("UTF-8"));
+
+        //
+        //connection.setRequestProperty("Accept", "application/sparql-results+json");
 
         InputStream inputStream = connection.getInputStream();
         StringBuilder response = new StringBuilder();
