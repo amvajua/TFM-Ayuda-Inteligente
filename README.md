@@ -23,7 +23,10 @@ TFM-Ayuda-Inteligente/
 ├── frontend/    # Frontend en React
 ├── odba/        # Fichero mapeo datos
 ├── ontoAC/      # Ontología implementada en diferentes formatos
-├── TFM_Doc/     # Documento TFM (fase borrador)
+├── prompt/      # Fichero prompt v1 y v2
+├── p4DetectErr/ # Frontend en React
+├── evalua/      # Evaluación y resultados
+├── TFM_Doc/     # Documentos TFM (doc extendido y memoria)
 └── README.md    # Este archivo
 ```
 ## 1.4 Ejecución general
@@ -53,8 +56,11 @@ npm start
 - [x] Detección semántica de errores con Ontop
 - [x] Evaluación detección semántica de errores
 - [x] Evaluación botón ayuda inteligente
-- [ ] Evaluación consultas personalizadas en progreso 
-
+- [x] Evaluación consultas personalizadas 
+- [x] Revisión fase1
+- [x] Creación memoria TFM: formato de artículo científico IEEE, entre 6 y 15 páginas:
+      Problema que se propone resolver, una revisión del estado del arte, la propuesta de solución,
+      la evaluación (teorías, resultados, comparativas) de la solución y las conclusiones.
 --------------------------------------------------------------------------------------------
 ## 1.6 Backend (`/backend`)
 - **Tecnología:** Java 8 + Spring Boot
