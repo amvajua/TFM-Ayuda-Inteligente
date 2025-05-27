@@ -24,6 +24,7 @@ TFM-Ayuda-Inteligente/
 ├── odba/        # Fichero mapeo datos
 ├── ontoAC/      # Ontología implementada en diferentes formatos
 ├── prompt/      # Fichero prompt v1 y v2
+├── p4DetectErr/ # Frontend en React
 ├── evalua/      # Evaluación y resultados
 ├── TFM_Doc/     # Documentos TFM (doc extendido y memoria)
 └── README.md    # Este archivo
